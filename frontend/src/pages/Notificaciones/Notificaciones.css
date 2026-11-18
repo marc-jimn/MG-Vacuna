@@ -1,0 +1,1878 @@
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+.notifications-page {
+    --nf-ink: #2f4357;
+    --nf-muted: #8998a6;
+    --nf-line: #e6edf2;
+    --nf-soft: #f7f9fb;
+
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+
+    color: var(--nf-ink);
+    font-family: "Poppins", sans-serif;
+
+    animation: nfPageIn .32s ease;
+}
+
+.notifications-page * {
+    box-sizing: border-box;
+}
+
+.notifications-page button,
+.notifications-page select {
+    font: inherit;
+}
+
+.notifications-page button:focus-visible,
+.notifications-page select:focus-visible {
+    outline: 3px solid rgba(76, 118, 155, .18);
+    outline-offset: 2px;
+}
+
+/* ---------- ANIMACIÓN DE ENTRADA ---------- */
+
+@keyframes nfPageIn {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- TEXTO SUPERIOR ---------- */
+
+.notif-eyebrow {
+    display: block;
+
+    color: #91a0ad;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+
+/* ---------- PANEL DE RESUMEN ---------- */
+
+.notif-overview {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    min-height: 145px;
+    margin: 19px 0 16px;
+    padding: 21px 24px;
+
+    border: 1px solid #e4ebf1;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        110deg,
+        #f7fafc 0%,
+        #f1f6fa 100%
+    );
+
+    overflow: hidden;
+}
+
+.notif-overview-copy {
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+}
+
+.notif-overview-copy h2 {
+    margin: 5px 0 6px;
+
+    color: #354e64;
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -.4px;
+}
+
+.notif-overview-copy p {
+    margin: 0;
+
+    color: #8797a5;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+/* ---------- ESTADÍSTICAS ---------- */
+
+.notif-overview-stats {
+    display: flex;
+    gap: 9px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.notif-stat {
+    min-width: 91px;
+    padding: 12px 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid rgba(224, 232, 238, .95);
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, .78);
+}
+
+.notif-stat > .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.notif-stat > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.notif-stat strong {
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.2;
+}
+
+.notif-stat small {
+    font-size: 7px;
+    color: #99a5af;
+}
+
+/* Colores de estadísticas */
+
+.notif-stat.red {
+    color: #b85a5b;
+}
+
+.notif-stat.amber {
+    color: #b48743;
+}
+
+.notif-stat.green {
+    color: #52896a;
+}
+
+/* ---------- ÁREA DE TRABAJO ---------- */
+
+.notif-workspace {
+    padding: 17px;
+
+    border: 1px solid var(--nf-line);
+    border-radius: 14px;
+
+    background: #fbfcfd;
+}
+
+/* ---------- BARRA DE HERRAMIENTAS ---------- */
+
+.notif-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.notif-toolbar-title h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 4px 0 0;
+
+    color: #344b61;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.notif-toolbar-title h2 span {
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #edf2f6;
+    color: #71879a;
+    font-size: 8px;
+}
+
+/* ---------- BOTÓN ACTUALIZAR ---------- */
+
+.notif-refresh {
+    height: 31px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    border: 1px solid #e3eaf0;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #6f8497;
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+.notif-refresh:hover {
+    background: #f3f7fa;
+}
+
+.notif-refresh .material-symbols-rounded {
+    font-size: 15px;
+}
+
+.notif-refresh:disabled {
+    opacity: .6;
+}
+
+/* ---------- ANIMACIÓN DE GIRO ---------- */
+
+.notif-spin {
+    animation: nfSpin .8s linear infinite;
+}
+
+@keyframes nfSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- FILTROS ---------- */
+
+.notif-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin: 15px 0 13px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eaf0f3;
+}
+
+.notif-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    overflow: auto;
+}
+
+.notif-filter-group button {
+    height: 29px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    background: transparent;
+    color: #8796a3;
+    font-size: 8px;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.notif-filter-group button.active {
+    border-color: #dce6ee;
+    background: #edf3f8;
+
+    color: #4b6e8a;
+    font-weight: 650;
+}
+
+.notif-filter-group button span {
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #fff;
+    color: #748ca0;
+    font-size: 7px;
+}
+
+/* ---------- SELECTOR DE CATEGORÍAS ---------- */
+
+.notif-category-select {
+    height: 31px;
+    min-width: 165px;
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    border: 1px solid #e4ebf0;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #8b9ba8;
+}
+
+.notif-category-select > .material-symbols-rounded {
+    font-size: 15px;
+}
+
+.notif-category-select select {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #687f93;
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+/* ---------- LISTA DE NOTIFICACIONES ---------- */
+
+.notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ---------- TARJETAS ---------- */
+
+.notif-card {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 14px 14px 13px;
+
+    border: 1px solid #e9eef2;
+    border-left: 3px solid #9ab1c5;
+    border-radius: 10px;
+
+    background: #fff;
+
+    transition:
+        box-shadow .16s,
+        border .16s;
+}
+
+.notif-card:hover {
+    box-shadow: 0 4px 14px rgba(38, 59, 79, .045);
+}
+
+.notif-card.unread {
+    background: #fcfdff;
+}
+
+.notif-card.severity-danger {
+    border-left-color: #c45f62;
+}
+
+.notif-card.severity-warning {
+    border-left-color: #c3954c;
+}
+
+.notif-card.severity-success {
+    border-left-color: #5b9a75;
+}
+
+.notif-card.severity-info {
+    border-left-color: #6e93b1;
+}
+
+.notif-card.resolved {
+    opacity: .76;
+}
+
+/* ---------- ICONOS DE TARJETAS ---------- */
+
+.notif-card-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: #edf3f8;
+    color: #5b7e9b;
+}
+
+.notif-card-icon .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.severity-danger .notif-card-icon {
+    background: #fff0ef;
+    color: #bb595d;
+}
+
+.severity-warning .notif-card-icon {
+    background: #fff6e9;
+    color: #b1823c;
+}
+
+.severity-success .notif-card-icon {
+    background: #edf7f0;
+    color: #528969;
+}
+
+.severity-info .notif-card-icon {
+    background: #edf4f9;
+    color: #5d83a1;
+}
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+
+.notif-card-main {
+    min-width: 0;
+    flex: 1;
+}
+
+.notif-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin: 0 0 6px;
+}
+
+/* ---------- ETIQUETAS ---------- */
+
+.notif-severity-pill,
+.notif-category-pill,
+.notif-unread-dot,
+.notif-resolved-pill {
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    font-size: 7px;
+    font-weight: 650;
+}
+
+.notif-severity-pill.danger {
+    background: #fff0ef;
+    color: #b45358;
+}
+
+.notif-severity-pill.warning {
+    background: #fff5e7;
+    color: #a77a3a;
+}
+
+.notif-severity-pill.success {
+    background: #edf7f0;
+    color: #4e8665;
+}
+
+.notif-severity-pill.info {
+    background: #edf3f8;
+    color: #5c7e9b;
+}
+
+.notif-category-pill {
+    background: #f1f4f6;
+    color: #8795a1;
+    font-weight: 550;
+}
+
+.notif-unread-dot {
+    background: #edf4fb;
+    color: #4c7aa1;
+}
+
+.notif-resolved-pill {
+    background: #eff4f0;
+    color: #658d70;
+}
+
+/* ---------- TÍTULOS Y DESCRIPCIONES ---------- */
+
+.notif-card-main h3 {
+    margin: 0 0 4px;
+
+    color: #3a5065;
+    font-size: 10px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.notif-card-main p {
+    max-width: 850px;
+    margin: 0;
+
+    color: #80909e;
+    font-size: 8px;
+    line-height: 1.7;
+}
+
+/* ---------- PIE DE TARJETA ---------- */
+
+.notif-card-foot {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+
+    margin-top: 9px;
+}
+
+.notif-card-foot > span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    color: #9aa6b0;
+    font-size: 7px;
+}
+
+.notif-card-foot .material-symbols-rounded {
+    font-size: 12px;
+    color: #9cadb9;
+}
+
+/* ---------- ACCIONES DE TARJETA ---------- */
+
+.notif-card-actions {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 112px;
+}
+
+.notif-action {
+    min-height: 25px;
+    padding: 0 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #8293a2;
+    font-size: 7px;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.notif-action:hover {
+    background: #f5f8fa;
+}
+
+.notif-action.secondary {
+    border-color: #e6edf2;
+    color: #71889b;
+}
+
+.notif-action.resolve {
+    color: #526f89;
+}
+
+.notif-action.resolve:hover {
+    background: #edf3f8;
+    color: #345773;
+}
+
+.notif-action.view {
+    color: #4f7898;
+}
+
+.notif-action .material-symbols-rounded {
+    font-size: 13px;
+}
+
+.notif-action:disabled {
+    opacity: .55;
+    cursor: wait;
+}
+
+/* ---------- ESTADOS DE CARGA Y VACÍO ---------- */
+
+.notif-loading,
+.notif-empty {
+    min-height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #8b9ba8;
+    font-size: 9px;
+}
+
+.notif-loading strong,
+.notif-empty strong {
+    color: #506a80;
+    font-size: 10px;
+}
+
+.notif-empty > .material-symbols-rounded {
+    font-size: 30px;
+    color: #a5b3be;
+}
+
+.notif-empty > span:last-child {
+    color: #9aa7b2;
+    font-size: 8px;
+    text-align: center;
+}
+
+/* ---------- SPINNER ---------- */
+
+.notif-spinner {
+    width: 24px;
+    height: 24px;
+
+    border: 3px solid #e7edf2;
+    border-top-color: #6d8ea9;
+    border-radius: 50%;
+
+    animation: nfSpin .8s linear infinite;
+}
+
+/* ---------- MENSAJES DE FEEDBACK ---------- */
+
+.notif-feedback {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 12px 0;
+    padding: 10px 12px;
+
+    border-radius: 8px;
+    font-size: 8px;
+}
+
+.notif-feedback.error {
+    border: 1px solid #efd9d9;
+    background: #fff2f1;
+    color: #ad5558;
+}
+
+.notif-feedback.success {
+    border: 1px solid #d9ecdf;
+    background: #eff8f1;
+    color: #4f8665;
+}
+
+.notif-feedback button {
+    margin-left: auto;
+
+    border: 0;
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+}
+
+.notif-feedback button .material-symbols-rounded {
+    font-size: 15px;
+}
+
+/* ---------- NOTA INFERIOR ---------- */
+
+.notif-footer-note {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin: 13px 3px 0;
+
+    color: #9ba7b1;
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+.notif-footer-note .material-symbols-rounded {
+    font-size: 15px;
+    color: #8da3b5;
+}
+
+/* Etiquetas generales */
+.notifications-page {
+  font-size: inherit;
+}
+
+.notif-eyebrow {
+  font-size: 11px;
+}
+
+/* Resumen superior */
+.notif-overview-copy h2 {
+  font-size: 20px;
+}
+
+.notif-overview-copy p {
+  font-size: 12px;
+}
+
+.notif-stat strong {
+  font-size: 18px;
+}
+
+.notif-stat small {
+  font-size: 10px;
+}
+
+/* Barra de herramientas */
+.notif-toolbar-title h2 {
+  font-size: 15px;
+}
+
+.notif-toolbar-title h2 span {
+  font-size: 11px;
+}
+
+.notif-refresh {
+  font-size: 11px;
+}
+
+/* Filtros */
+.notif-filter-group button {
+  font-size: 11px;
+}
+
+.notif-filter-group button span {
+  font-size: 10px;
+}
+
+.notif-category-select select {
+  font-size: 11px;
+}
+
+/* Tarjetas de notificaciones */
+.notif-card-main h3 {
+  font-size: 13px;
+}
+
+.notif-card-main p {
+  font-size: 11px;
+}
+
+/* Etiquetas de severidad y categoría */
+.notif-severity-pill,
+.notif-category-pill,
+.notif-unread-dot,
+.notif-resolved-pill {
+  font-size: 10px;
+}
+
+/* Información inferior de cada tarjeta */
+.notif-card-foot > span {
+  font-size: 10px;
+}
+
+/* Botones de acciones */
+.notif-action {
+  font-size: 10px;
+}
+
+/* Estados de carga y vacío */
+.notif-loading,
+.notif-empty {
+  font-size: 12px;
+}
+
+.notif-loading strong,
+.notif-empty strong {
+  font-size: 13px;
+}
+
+.notif-empty > span:last-child {
+  font-size: 11px;
+}
+
+/* Mensajes de éxito y error */
+.notif-feedback {
+  font-size: 11px;
+}
+
+/* Nota inferior */
+.notif-footer-note {
+  font-size: 11px;
+}
+
+/* =====================================================
+   AJUSTES RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+  .notif-overview-copy h2 {
+    font-size: 17px;
+  }
+
+  .notif-stat strong {
+    font-size: 15px;
+  }
+}
+
+/* Selectores */
+.notifications-page select,
+.notifications-page .notif-category-select {
+  box-shadow: none !important;
+}
+
+/* Botones */
+.notifications-page button,
+.notifications-page button:hover,
+.notifications-page button:active,
+.notifications-page button:focus {
+  box-shadow: none !important;
+}
+
+/* Campos de escritura */
+.notifications-page input,
+.notifications-page textarea,
+.notifications-page select {
+  box-shadow: none !important;
+}
+
+/* Controles al recibir el foco */
+.notifications-page button:focus-visible,
+.notifications-page select:focus-visible,
+.notifications-page input:focus-visible,
+.notifications-page textarea:focus-visible {
+  box-shadow: none !important;
+}
+
+/* Tarjetas y elementos interactivos */
+.notifications-page .notif-card,
+.notifications-page .notif-card:hover,
+.notifications-page .notif-refresh:hover,
+.notifications-page .notif-action:hover {
+  box-shadow: none !important;
+}
+
+.notifications-page .notif-category-select,
+.notifications-page .notif-category-select select,
+.notifications-page .notif-category-select select:hover,
+.notifications-page .notif-category-select select:focus,
+.notifications-page .notif-category-select select:active {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  filter: none !important;
+  outline: none !important;
+  background-image: none !important;
+}
+
+/* Evitar sombras de estilos globales */
+.notifications-page .notif-category-select {
+  background-color: #fff !important;
+  border: 1px solid #e4ebf0 !important;
+}
+
+/* Eliminar apariencia nativa del selector */
+.notifications-page .notif-category-select select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+}
+/* TRANSICIONES GENERALES */
+.notifications-page .notif-refresh,
+.notifications-page .notif-action,
+.notifications-page .notif-category-select {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 9px;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   BOTÓN ACTUALIZAR
+   ESTILO PRINCIPAL
+========================================= */
+
+.notifications-page .notif-refresh {
+  min-height: 42px;
+  padding: 0 16px;
+  gap: 9px;
+  border: 1px solid #263f59;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.notifications-page .notif-refresh:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #3e617f;
+  border-color: #3e617f;
+  color: #ffffff;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   MARCAR LEÍDA
+   ESTILO SECUNDARIO
+========================================= */
+
+.notifications-page .notif-action.secondary {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #496984;
+  font-size: 11px;
+}
+
+.notifications-page .notif-action.secondary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+  color: #496984;
+}
+
+/* =========================================
+   VER MÓDULO
+   ESTILO PRINCIPAL
+========================================= */
+
+.notifications-page .notif-action.view {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #263f59;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.notifications-page .notif-action.view:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #3e617f;
+  background: #3e617f;
+  color: #ffffff;
+}
+
+/* =========================================
+   TODAS LAS CATEGORÍAS
+   ESTILO SECUNDARIO
+========================================= */
+
+.notifications-page .notif-category-select {
+  min-height: 42px;
+  padding: 0 12px;
+  gap: 9px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #496984;
+  box-shadow: none !important;
+}
+
+.notifications-page .notif-category-select:hover {
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+}
+
+.notifications-page .notif-category-select select {
+  min-height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #496984;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* =========================================
+   ESTADOS DESHABILITADOS
+========================================= */
+
+.notifications-page .notif-refresh:disabled,
+.notifications-page .notif-action:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .notifications-page .notif-refresh {
+    min-height: 38px;
+  }
+
+  .notifications-page .notif-category-select {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .notifications-page .notif-action.secondary,
+  .notifications-page .notif-action.view {
+    min-height: 38px;
+    padding: 0 12px;
+  }
+}
+
+/* TRANSICIONES GENERALES */
+.notifications-page .notif-refresh,
+.notifications-page .notif-action,
+.notifications-page .notif-category-select {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 9px;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   BOTÓN ACTUALIZAR
+   ESTILO PRINCIPAL
+========================================= */
+
+.notifications-page .notif-refresh {
+  min-height: 42px;
+  padding: 0 16px;
+  gap: 9px;
+  border: 1px solid #263f59;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.notifications-page .notif-refresh:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #3e617f;
+  border-color: #3e617f;
+  color: #ffffff;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   MARCAR LEÍDA
+   ESTILO SECUNDARIO
+========================================= */
+
+.notifications-page .notif-action.secondary {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #496984;
+  font-size: 11px;
+}
+
+.notifications-page .notif-action.secondary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+  color: #496984;
+}
+
+/* =========================================
+   VER MÓDULO
+   ESTILO PRINCIPAL
+========================================= */
+
+.notifications-page .notif-action.view {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #263f59;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.notifications-page .notif-action.view:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #3e617f;
+  background: #3e617f;
+  color: #ffffff;
+}
+
+/* =========================================
+   TODAS LAS CATEGORÍAS
+   ESTILO SECUNDARIO
+========================================= */
+
+.notifications-page .notif-category-select {
+  min-height: 42px;
+  padding: 0 12px;
+  gap: 9px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #496984;
+  box-shadow: none !important;
+}
+
+.notifications-page .notif-category-select:hover {
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+}
+
+.notifications-page .notif-category-select select {
+  min-height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #496984;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* =========================================
+   ESTADOS DESHABILITADOS
+========================================= */
+
+.notifications-page .notif-refresh:disabled,
+.notifications-page .notif-action:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .notifications-page .notif-refresh {
+    min-height: 38px;
+  }
+
+  .notifications-page .notif-category-select {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .notifications-page .notif-action.secondary,
+  .notifications-page .notif-action.view {
+    min-height: 38px;
+    padding: 0 12px;
+  }
+}
+
+/* MEDIDAS GENERALES */
+.notifications-page .notif-refresh,
+.notifications-page .notif-action {
+  min-height: 34px !important;
+  height: 34px;
+  padding: 0 13px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px !important;
+  font-weight: 500;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+/* =========================================
+   ACTUALIZAR - PRINCIPAL
+========================================= */
+
+.notifications-page .notif-refresh {
+  border: 1px solid #263f59;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #fff;
+}
+
+.notifications-page .notif-refresh:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #3e617f;
+}
+
+/* =========================================
+   VER MÓDULO - PRINCIPAL
+========================================= */
+
+.notifications-page .notif-action.view {
+  border: 1px solid #263f59;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #fff;
+}
+
+.notifications-page .notif-action.view:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #3e617f;
+  color: #fff;
+}
+
+/* =========================================
+   MARCAR LEÍDA - SECUNDARIO
+========================================= */
+
+.notifications-page .notif-action.secondary {
+  border: 1px solid #dce5ed;
+  background: #fff;
+  color: #496984;
+}
+
+.notifications-page .notif-action.secondary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+}
+
+/* =========================================
+   RESOLVER - SECUNDARIO
+========================================= */
+
+.notifications-page .notif-action.resolve {
+  border: 1px solid #dce5ed;
+  background: #fff;
+  color: #496984;
+}
+
+.notifications-page .notif-action.resolve:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+  color: #345773;
+}
+
+/* ICONOS */
+.notifications-page .notif-action .material-symbols-rounded,
+.notifications-page .notif-refresh .material-symbols-rounded {
+  font-size: 14px;
+}
+
+/* =========================================
+   SELECTOR DE CATEGORÍAS
+========================================= */
+
+.notifications-page .notif-category-select {
+  height: 34px;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #dce5ed;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none !important;
+}
+
+.notifications-page .notif-category-select select {
+  height: 32px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #496984;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+/* DESHABILITADOS */
+.notifications-page .notif-action:disabled,
+.notifications-page .notif-refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+  .notifications-page .notif-action,
+  .notifications-page .notif-refresh {
+    height: 34px;
+    min-height: 34px !important;
+  }
+
+  .notifications-page .notif-category-select {
+    width: 100%;
+  }
+}
+
+.notifications-page .notif-action {
+  width: 112px !important;
+  min-width: 112px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 8px !important;
+  justify-content: center;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px !important;
+  font-weight: 550;
+  box-shadow: none !important;
+}
+
+/* VER MÓDULO */
+.notifications-page .notif-action.view {
+  border: 1px solid #263f59;
+  background: linear-gradient(135deg, #304e69, #20394f);
+  color: #ffffff;
+}
+
+.notifications-page .notif-action.view:hover:not(:disabled) {
+  background: #3e617f;
+  border-color: #3e617f;
+}
+
+/* MARCAR LEÍDA */
+.notifications-page .notif-action.secondary {
+  border: 1px solid #dce5ed;
+  background: #ffffff;
+  color: #304e69;
+}
+
+.notifications-page .notif-action.secondary:hover:not(:disabled) {
+  border-color: #a9bfd1;
+  background: #f3f7fa;
+  color: #20394f;
+}
+
+/* RESOLVER */
+.notifications-page .notif-action.resolve {
+  border: 1px solid #d8e9dc;
+  background: #ffffff;
+  color: #528969;
+}
+
+.notifications-page .notif-action.resolve:hover:not(:disabled) {
+  border-color: #a9ceb2;
+  background: #eff7f0;
+  color: #39734e;
+}
+
+/* ICONO DE RESOLVER */
+.notifications-page .notif-action.resolve .material-symbols-rounded {
+  color: #528969;
+}
+
+/* ESTADO DESHABILITADO */
+.notifications-page .notif-action:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+  .notifications-page .notif-action {
+    width: 112px !important;
+    min-width: 112px !important;
+  }
+}
+
+.notifications-page .notif-overview-copy h2 {
+  font-size: 17px !important;
+}
+
+/* =========================================
+   MODAL DE REPORTE - CENTRO DE SOLUCIONES
+========================================= */
+
+.notif-report-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(5px);
+  animation: notifReportFade 0.2s ease;
+}
+
+.notif-report-modal {
+  width: min(100%, 540px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.25);
+  animation: notifReportEnter 0.25s ease;
+}
+
+.notif-report-header {
+  position: relative;
+  padding: 30px 30px 24px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.notif-report-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  color: #b7791f;
+  background: #fff5df;
+}
+
+.notif-report-icon .material-symbols-rounded {
+  font-size: 27px;
+}
+
+.notif-report-header .notif-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #8b95a5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.notif-report-header h2 {
+  margin: 0 0 9px;
+  color: #17243a;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.notif-report-header > p {
+  max-width: 420px;
+  margin: 0;
+  color: #788397;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.notif-report-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  color: #8791a1;
+  background: #f3f5f8;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notif-report-close:hover {
+  color: #dc4545;
+  background: #fff0f0;
+}
+
+.notif-report-body {
+  padding: 24px 30px 28px;
+}
+
+.notif-report-context {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 16px;
+  margin-bottom: 23px;
+  border: 1px solid #f3dfb7;
+  border-radius: 13px;
+  background: #fffbf1;
+}
+
+.notif-report-context > .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #c58b27;
+  font-size: 22px;
+}
+
+.notif-report-context strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #604719;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.notif-report-context p {
+  margin: 0;
+  color: #88754f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.notif-report-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.notif-report-field label {
+  color: #29364a;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.notif-report-field textarea {
+  width: 100%;
+  min-height: 135px;
+  padding: 14px 15px;
+  resize: vertical;
+  border: 1px solid #dfe5ed;
+  border-radius: 12px;
+  outline: none;
+  background: #fbfcfe;
+  color: #253247;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.notif-report-field textarea::placeholder {
+  color: #a6afbd;
+}
+
+.notif-report-field textarea:focus {
+  border-color: #5686bd;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(86, 134, 189, 0.12);
+}
+
+.notif-report-field small {
+  align-self: flex-end;
+  color: #9aa3b1;
+  font-size: 11px;
+}
+
+.notif-report-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #f1f6fb;
+}
+
+.notif-report-notice .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #5a82a9;
+  font-size: 19px;
+}
+
+.notif-report-notice p {
+  margin: 0;
+  color: #62758a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.notif-report-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 11px;
+  margin-top: 25px;
+}
+
+.notif-report-cancel,
+.notif-report-submit {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notif-report-cancel {
+  border: 1px solid #e1e6ed;
+  color: #667387;
+  background: #ffffff;
+}
+
+.notif-report-cancel:hover {
+  background: #f5f7fa;
+  border-color: #cbd3df;
+}
+
+.notif-report-submit {
+  border: 1px solid #285b91;
+  color: #ffffff;
+  background: #285b91;
+  box-shadow: 0 4px 10px rgba(40, 91, 145, 0.15);
+}
+
+.notif-report-submit:hover:not(:disabled) {
+  background: #1d4978;
+  transform: translateY(-1px);
+}
+
+.notif-report-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.notif-report-submit .material-symbols-rounded {
+  font-size: 17px;
+}
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes notifReportFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes notifReportEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .notif-report-backdrop {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .notif-report-modal {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .notif-report-header {
+    padding: 24px 20px 20px;
+  }
+
+  .notif-report-header h2 {
+    font-size: 20px;
+  }
+
+  .notif-report-body {
+    padding: 20px;
+  }
+
+  .notif-report-actions {
+    flex-direction: column-reverse;
+  }
+
+  .notif-report-cancel,
+  .notif-report-submit {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* Botones más pequeños */
+.notif-report-actions button {
+  font-size: 12px;
+  padding: 9px 13px;
+  min-height: 36px;
+  gap: 6px;
+}
+
+/* Ícono del botón de envío */
+.notif-report-submit .material-symbols-rounded {
+  font-size: 16px;
+}
+
+/* Texto del cuadro de descripción */
+.notif-report-field textarea {
+  font-size: 13px;
+}
+
+/* Texto de apoyo y contador */
+.notif-report-field small {
+  font-size: 11px;
+}
+
+.inv-modal .inv-field select {
+  font-size: 11px;
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVE
+===================================================== */
+
+/* ---------- TABLETS Y PANTALLAS MEDIANAS ---------- */
+
+@media (max-width: 850px) {
+
+    .notif-overview {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .notif-overview-stats {
+        width: 100%;
+    }
+
+    .notif-stat {
+        flex: 1;
+    }
+
+    .notif-card {
+        flex-wrap: wrap;
+    }
+
+    .notif-card-actions {
+        width: 100%;
+        min-width: 0;
+
+        flex-direction: row;
+        justify-content: flex-end;
+
+        padding-top: 7px;
+        border-top: 1px solid #f0f3f5;
+    }
+}
+
+
+/* ---------- MÓVILES ---------- */
+
+@media (max-width: 650px) {
+
+    .notif-overview {
+        padding: 16px;
+    }
+
+    .notif-overview-copy h2 {
+        font-size: 16px;
+    }
+
+    .notif-workspace {
+        padding: 12px 9px;
+    }
+
+    .notif-filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .notif-category-select {
+        width: 100%;
+    }
+
+    .notif-toolbar {
+        align-items: flex-start;
+    }
+
+    .notif-card {
+        padding: 11px 10px;
+        gap: 8px;
+    }
+
+    .notif-card-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .notif-card-main {
+        width: calc(100% - 40px);
+    }
+
+    .notif-card-actions {
+        flex-wrap: wrap;
+    }
+
+    .notif-overview-stats {
+        gap: 5px;
+    }
+
+    .notif-stat {
+        min-width: 0;
+        padding: 9px;
+    }
+
+    .notif-stat > .material-symbols-rounded {
+        font-size: 16px;
+    }
+
+    .notif-stat strong {
+        font-size: 14px;
+    }
+}

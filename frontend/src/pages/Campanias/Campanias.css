@@ -1,0 +1,1614 @@
+.campanias-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  color: #1a2335;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Indicadores */
+
+.campanias-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 13px;
+  margin: 25px 0;
+}
+
+.campanias-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  min-height: 85px;
+  padding: 13px;
+  background: #fff;
+  border: 1px solid #e6ebf0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(26, 35, 53, 0.035);
+}
+
+.campanias-stat-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.campanias-stat-icon .material-symbols-rounded {
+  font-size: 21px;
+}
+
+.campanias-stat-icon.total {
+  color: #304e69;
+  background: #eaf0f6;
+}
+
+.campanias-stat-icon.planned {
+  color: #8a6a2d;
+  background: #f8f1e3;
+}
+
+.campanias-stat-icon.active {
+  color: #347a65;
+  background: #e7f3ee;
+}
+
+.campanias-stat-icon.finished {
+  color: #64748b;
+  background: #edf0f4;
+}
+
+.campanias-stat-icon.cancelled {
+  color: #b64e55;
+  background: #fcebed;
+}
+
+.campanias-stat-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.campanias-stat-card span:not(.material-symbols-rounded) {
+  color: #81909e;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.campanias-stat-card strong {
+  color: #1a2335;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Mensajes */
+
+.campanias-feedback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.campanias-feedback.success {
+  color: #287253;
+  background: #edf7f1;
+  border: 1px solid #d5ecde;
+}
+
+.campanias-feedback.error {
+  color: #a23e43;
+  background: #fff0f0;
+  border: 1px solid #f2d6d6;
+}
+
+.campanias-feedback button {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* BÚSQUEDA Y FILTROS */
+
+.campanias-toolbar {
+  display: flex;
+  gap: 13px;
+  margin: 25px 0 32px;
+}
+
+.campanias-search {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid #e1e7ed;
+  border-radius: 10px;
+}
+
+.campanias-search > span {
+  color: #81909e;
+  font-size: 21px;
+}
+
+.campanias-search input {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #1a2335;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.campanias-search input::placeholder {
+  color: #a1acb7;
+}
+
+.campanias-filter {
+  min-width: 190px;
+  padding: 0 14px;
+  border: 1px solid #e1e7ed;
+  border-radius: 10px;
+  background: #fff;
+  color: #304e69;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+/* SECCIONES */
+
+.campanias-section {
+  margin-bottom: 42px;
+}
+
+.campanias-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 19px;
+}
+
+.campanias-section-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+}
+
+.campanias-section-icon .material-symbols-rounded {
+  font-size: 25px;
+}
+
+.campanias-section-icon.humana {
+  color: #304e69;
+  background: #eaf0f6;
+}
+
+.campanias-section-icon.veterinaria {
+  color: #43816d;
+  background: #e8f3ed;
+}
+
+.campanias-section-heading > div:nth-child(2) {
+  min-width: 0;
+}
+
+.campanias-section-heading h2 {
+  margin: 0;
+  color: #1a2335;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.campanias-section-heading p {
+  margin: 3px 0 0;
+  color: #81909e;
+  font-size: 11px;
+}
+
+.campanias-section-count {
+  margin-left: auto;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #f0f3f6;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* TARJETAS */
+
+.campanias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.campania-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  box-shadow: 0 3px 13px rgba(26, 35, 53, 0.035);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.campania-card:hover {
+  transform: translateY(-3px);
+  border-color: #d1dce6;
+  box-shadow: 0 9px 22px rgba(26, 35, 53, 0.08);
+}
+
+.campania-card-image {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  background: #edf1f5;
+}
+
+.campania-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.campania-card:hover .campania-card-image img {
+  transform: scale(1.035);
+}
+
+.campania-image-fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #81909e;
+  background:
+    linear-gradient(135deg, #edf2f6, #e3eaf0);
+}
+
+.campania-image-fallback .material-symbols-rounded {
+  font-size: 55px;
+}
+
+.campania-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  font-size: 10px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+.status-planeada {
+  color: #8a6a2d;
+}
+
+.status-activa {
+  color: #287253;
+}
+
+.status-finalizada {
+  color: #64748b;
+}
+
+.status-cancelada {
+  color: #a23e43;
+}
+
+.campania-card-content {
+  padding: 17px 18px 16px;
+}
+
+.campania-card-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #81909e;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.campania-card-code .material-symbols-rounded {
+  color: #9aa8b5;
+  font-size: 19px;
+}
+
+.campania-card-content h3 {
+  margin: 9px 0 7px;
+  color: #1a2335;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.campania-card-description {
+  min-height: 38px;
+  margin: 0 0 16px;
+  color: #81909e;
+  font-size: 11px;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.campania-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 13px 0;
+  border-top: 1px solid #edf0f3;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.campania-card-details > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.campania-card-details .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #8196a8;
+  font-size: 17px;
+}
+
+.campania-date-separator {
+  color: #aab4bd;
+}
+
+.campania-edit-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 13px;
+  padding: 10px;
+  border: 1px solid #dce5ed;
+  border-radius: 8px;
+  background: #f7f9fb;
+  color: #304e69;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.campania-edit-button:hover {
+  border-color: #304e69;
+  background: #eaf0f6;
+}
+
+.campania-edit-button .material-symbols-rounded {
+  font-size: 17px;
+}
+
+/* ESTADOS VACÍOS Y CARGA */
+
+.campanias-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 20px;
+  border: 1px dashed #dce4eb;
+  border-radius: 13px;
+  background: #fafbfd;
+  text-align: center;
+}
+
+.campanias-empty > .material-symbols-rounded {
+  color: #9aa9b6;
+  font-size: 35px;
+}
+
+.campanias-empty h3 {
+  margin: 10px 0 4px;
+  color: #405367;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.campanias-empty p {
+  margin: 0;
+  color: #94a0ac;
+  font-size: 11px;
+}
+
+.campanias-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 70px 20px;
+  color: #81909e;
+  font-size: 12px;
+}
+
+.campanias-loading .material-symbols-rounded {
+  font-size: 30px;
+  animation: campania-girar 1.2s linear infinite;
+}
+
+@keyframes campania-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MODAL */
+
+.campania-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(17, 29, 43, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.campania-modal {
+  width: 100%;
+  max-width: 720px;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 20px 65px rgba(10, 20, 35, 0.22);
+}
+
+.campania-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 27px 20px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.campania-eyebrow {
+  color: #8196a8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.campania-modal-header h2 {
+  margin: 5px 0;
+  color: #1a2335;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.campania-modal-header p {
+  margin: 0;
+  color: #81909e;
+  font-size: 11px;
+}
+
+.campania-close-button {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 9px;
+  background: #f1f4f7;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.campania-modal form {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.campania-form-body {
+  padding: 8px 27px 22px;
+  overflow-y: auto;
+}
+
+.campania-form-section {
+  padding: 17px 0 19px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.campania-form-section:last-child {
+  border-bottom: 0;
+}
+
+.campania-form-section h3 {
+  margin: 0 0 15px;
+  color: #304e69;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.campania-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.campania-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campania-field-full {
+  grid-column: 1 / -1;
+}
+
+.campania-field > span {
+  color: #536477;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.campania-field input,
+.campania-field select,
+.campania-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #dfe6ec;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #304052;
+  font-family: inherit;
+  font-size: 11px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campania-field input:focus,
+.campania-field select:focus,
+.campania-field textarea:focus {
+  border-color: #6c879e;
+  box-shadow: 0 0 0 3px rgba(83, 116, 145, 0.1);
+}
+
+.campania-field textarea {
+  resize: vertical;
+}
+
+.campania-field small {
+  color: #94a0ac;
+  font-size: 9px;
+}
+
+.campania-form-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 11px 13px;
+  border: 1px solid #f1d6d6;
+  border-radius: 8px;
+  background: #fff2f2;
+  color: #a23e43;
+  font-size: 11px;
+}
+
+.campania-form-error .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.campania-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 27px;
+  border-top: 1px solid #edf0f3;
+  background: #fbfcfd;
+}
+
+.campania-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.campania-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.campania-button .material-symbols-rounded {
+  font-size: 17px;
+}
+
+.campania-button-light {
+  border-color: #dfe6ec;
+  background: #fff;
+  color: #64748b;
+}
+
+.campania-button-light:hover {
+  background: #f1f4f7;
+}
+
+.campania-button-primary {
+  background: #304e69;
+  color: #fff;
+}
+
+.campania-button-primary:hover {
+  background: #24394e;
+}
+
+/* =========================================
+   TARJETAS DE CAMPAÑAS - NUEVA DISTRIBUCIÓN
+========================================= */
+
+.campania-card.campania-card-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e7edf3;
+  border-radius: 17px;
+  box-shadow: 0 3px 12px rgba(35, 55, 80, 0.045);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.campania-card.campania-card-v2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(35, 55, 80, 0.085);
+}
+
+
+/* ENCABEZADO */
+
+.campania-card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.campania-card-avatar {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #edf2f7;
+  background: #f4f7fa;
+}
+
+.campania-card-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.campania-card-name {
+  margin: 0;
+  color: #26384b;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.campania-card-code {
+  color: #8291a3;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.campania-card-description {
+  margin: 0;
+  color: #68788a;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+
+/* INICIO, FIN Y STATUS */
+
+.campania-card-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #edf1f5;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.campania-card-timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.campania-card-timeline-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #738397;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.campania-card-timeline-heading .material-symbols-rounded {
+  color: #6d8eae;
+  font-size: 17px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
+}
+
+.campania-card-timeline-value {
+  margin: 0;
+  color: #34475a;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* ESTADOS */
+
+.campania-state {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.campania-state--planeada {
+  color: #99732b;
+  background: #fff6df;
+}
+
+.campania-state--activa {
+  color: #25815e;
+  background: #e5f6ed;
+}
+
+.campania-state--finalizada {
+  color: #52718e;
+  background: #eaf1f7;
+}
+
+.campania-state--cancelada {
+  color: #b64e55;
+  background: #fcebed;
+}
+
+
+/* INFORMACIÓN DE DOSIS Y RESPONSABLE */
+
+.campania-card-extra {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+
+/* BOTONES */
+
+.campania-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 3px;
+}
+
+.campania-card-actions button {
+  flex: 1;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .campania-card.campania-card-v2 {
+    padding: 17px;
+    gap: 14px;
+  }
+
+  .campania-card-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .campania-card-name {
+    font-size: 13px;
+  }
+
+  .campania-card-timeline {
+    gap: 7px;
+  }
+
+  .campania-card-timeline-heading {
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .campania-card-timeline-heading .material-symbols-rounded {
+    font-size: 15px;
+  }
+
+  .campania-card-timeline-value {
+    font-size: 10px;
+  }
+
+  .campania-card-actions {
+    flex-direction: column;
+  }
+
+  .campania-card-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .campania-card-timeline {
+    gap: 5px;
+  }
+
+  .campania-card-timeline-heading {
+    font-size: 9px;
+  }
+
+  .campania-card-timeline-value {
+    font-size: 9px;
+  }
+
+  .campania-state {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   PANEL DE BÚSQUEDA Y FILTROS
+========================================= */
+
+.campania-filters-panel {
+  width: 100%;
+  padding: 21px 23px;
+  margin-bottom: 25px;
+  background: #ffffff;
+  border: 1px solid #e8edf2;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(35, 55, 80, 0.04);
+}
+
+.campania-filters-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+  gap: 15px;
+  align-items: end;
+}
+
+.campania-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.campania-filter-field label {
+  color: #526579;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.campania-filter-field select,
+.campania-search-input {
+  width: 100%;
+  height: 43px;
+  min-width: 0;
+  padding: 0 12px;
+  color: #40546a;
+  background: #ffffff;
+  border: 1px solid #e1e8ef;
+  border-radius: 9px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campania-filter-field select {
+  cursor: pointer;
+  padding-right: 32px;
+  background-position: right 50px center;
+}
+
+.campania-filter-field select:focus,
+.campania-search-input:focus-within {
+  border-color: #83a8ca;
+  box-shadow: 0 0 0 3px rgba(104, 148, 187, 0.12);
+}
+
+.campania-search-input {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.campania-search-input .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #8a9bad;
+  font-size: 19px;
+}
+
+.campania-search-input input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: #40546a;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+}
+
+.campania-search-input input::placeholder {
+  color: #a4afbb;
+}
+
+/* LIMPIAR FILTROS */
+
+.campania-filters-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 17px;
+  padding-top: 13px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.campania-filter-results {
+  color: #8997a6;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+.campania-clear-filters {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  color: #6387a8;
+  background: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Icono de limpiar filtros */
+.campania-clear-filters .material-symbols-rounded {
+  display: block;
+  font-size: 16px;
+}
+
+.campania-clear-filters:hover {
+  color: #355f83;
+}
+
+.campania-clear-filters-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.campania-clear-filters .material-symbols-rounded {
+  text-decoration: none;
+}
+
+/* =========================================
+   DOSIS Y RESPONSABLE
+========================================= */
+
+.campania-card-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2px 0;
+}
+
+.campania-card-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.campania-card-meta-line > .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #8299ad;
+  font-size: 18px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
+}
+
+.campania-card-meta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.campania-card-meta-label {
+  color: #8997a6;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.campania-card-meta-value {
+  overflow-wrap: anywhere;
+  color: #485b6e;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.campania-card-doses {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* Evitar desbordamientos */
+.campania-card-doses .campania-card-meta-line {
+  min-width: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 380px) {
+  .campania-card-doses {
+    gap: 7px;
+  }
+
+  .campania-card-doses .campania-card-meta-label {
+    font-size: 9px;
+  }
+
+  .campania-card-doses .campania-card-meta-value {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   BOTONES DE LA TARJETA
+========================================= */
+
+.campania-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+  width: 100%;
+  margin-top: 3px;
+  padding-top: 14px;
+  border-top: 1px solid #edf1f5;
+}
+
+.campania-button-details,
+.campania-button-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 39px;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 9px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.campania-button-details .material-symbols-rounded,
+.campania-button-edit .material-symbols-rounded {
+  font-size: 17px;
+}
+
+.campania-button-details {
+  color: #527b9e;
+  background: #eaf2f8;
+}
+
+.campania-button-details:hover {
+  background: #dceaf5;
+}
+
+.campania-button-edit {
+  color: #ffffff;
+  background: #527da3;
+}
+
+.campania-button-edit:hover {
+  background: #416b91;
+}
+
+.campania-button-details:active,
+.campania-button-edit:active {
+  transform: scale(0.985);
+}
+
+
+/* =========================================
+   MODAL DE DETALLES
+========================================= */
+
+.campania-details-overlay {
+  position: fixed;
+  z-index: 1100;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(22, 37, 53, 0.52);
+  backdrop-filter: blur(5px);
+  animation: details-overlay-in 0.2s ease;
+}
+
+@keyframes details-overlay-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.campania-details-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #e7edf3;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(20, 40, 60, 0.22);
+  animation: details-modal-in 0.25s ease;
+}
+
+@keyframes details-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ENCABEZADO */
+
+.campania-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px 25px 20px;
+  background: linear-gradient(135deg, #f6f9fc, #edf3f8);
+  border-bottom: 1px solid #e7edf3;
+}
+
+.campania-details-eyebrow {
+  color: #7892a9;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.campania-details-header h2 {
+  margin: 8px 0 5px;
+  color: #263d54;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.campania-details-header .campania-card-code {
+  display: inline-block;
+  margin-top: 3px;
+  color: #8193a5;
+  font-size: 11px;
+}
+
+.campania-details-close {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #647b90;
+  background: #ffffff;
+  border: 1px solid #e2eaf1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.campania-details-close:hover {
+  color: #304e69;
+  background: #eaf1f7;
+  transform: rotate(5deg);
+}
+
+/* CUERPO */
+
+.campania-details-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 12px 25px;
+}
+
+.campania-details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 14px 10px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.campania-details-item:nth-child(odd) {
+  padding-left: 0;
+}
+
+.campania-details-item:nth-child(even) {
+  padding-right: 0;
+}
+
+.campania-details-item-full {
+  grid-column: 1 / -1;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.campania-details-label {
+  color: #8999a9;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.campania-details-value {
+  color: #344a60;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.campania-details-item-full p {
+  margin: 0;
+  font-weight: 400;
+  color: #687b8e;
+}
+
+/* ESTADO */
+
+.campania-details-body .campania-state {
+  font-size: 10px;
+  padding: 5px 10px;
+}
+
+/* PIE Y BOTONES */
+
+.campania-details-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 25px 23px;
+  border-top: 1px solid #edf1f5;
+  background: #fbfcfd;
+}
+
+.campania-details-actions .campania-button-edit {
+  min-height: 42px;
+  border-radius: 9px;
+}
+
+.campania-details-close-button {
+  width: 100%;
+  min-height: 38px;
+  color: #73869a;
+  background: #ffffff;
+  border: 1px solid #e2e9ef;
+  border-radius: 9px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.campania-details-close-button:hover {
+  color: #304e69;
+  background: #edf3f8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 560px) {
+  .campania-details-overlay {
+    padding: 12px;
+  }
+
+  .campania-details-modal {
+    max-height: 90vh;
+  }
+
+  .campania-details-header {
+    padding: 20px;
+  }
+
+  .campania-details-body {
+    padding: 10px 20px;
+  }
+
+  .campania-details-actions {
+    padding: 15px 20px 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campania-details-overlay,
+  .campania-details-modal {
+    animation: none;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .campania-filters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .campania-filters-panel {
+    padding: 17px;
+  }
+
+  .campania-filters-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .campania-filters-footer {
+    align-items: flex-start;
+  }
+
+  .campania-details-modal {
+    padding: 19px;
+  }
+}
+
+.campania-filter-field {
+  position: relative;
+}
+
+.campania-filter-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 38px;
+}
+
+/* Flecha personalizada */
+.campania-filter-field::after {
+  content: "keyboard_arrow_down";
+  font-family: "Material Symbols Rounded";
+  font-size: 20px;
+  position: absolute;
+  right: 7px;
+  bottom: 11px;
+  color: #81909e;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .campanias-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .campanias-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .campanias-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .campanias-stat-card {
+    min-height: 78px;
+    padding: 11px;
+    gap: 9px;
+  }
+
+  .campanias-stat-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .campanias-stat-card strong {
+    font-size: 19px;
+  }
+
+  .campanias-stat-card span:not(.material-symbols-rounded) {
+    font-size: 10px;
+  }
+
+  .campanias-toolbar {
+    flex-direction: column;
+  }
+
+  .campanias-search {
+    flex: auto;
+  }
+
+  .campanias-search input {
+    height: 43px;
+  }
+
+  .campanias-filter {
+    min-height: 43px;
+  }
+
+  .campanias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campanias-section-heading {
+    gap: 10px;
+  }
+
+  .campanias-section-heading h2 {
+    font-size: 15px;
+  }
+
+  .campanias-section-heading p {
+    font-size: 10px;
+  }
+
+  .campanias-section-count {
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+
+  .campania-modal-overlay {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .campania-modal {
+    max-height: calc(100vh - 20px);
+  }
+
+  .campania-modal-header {
+    padding: 19px;
+  }
+
+  .campania-form-body {
+    padding: 5px 19px 15px;
+  }
+
+  .campania-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campania-field-full {
+    grid-column: auto;
+  }
+
+  .campania-modal-footer {
+    padding: 13px 19px;
+  }
+
+  .campania-button {
+    padding: 10px 12px;
+  }
+}

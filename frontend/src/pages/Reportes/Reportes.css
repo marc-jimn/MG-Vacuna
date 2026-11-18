@@ -1,0 +1,2553 @@
+/* =========================================
+   REPORTES - ESTILOS GENERALES
+========================================= */
+
+.reportes-page {
+    --rep-ink: #30465c;
+    --rep-muted: #8796a4;
+    --rep-line: #e6ecf1;
+    --rep-blue: #456d8e;
+
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+    padding-bottom: 36px;
+
+    color: var(--rep-ink);
+    font-family: "Poppins", sans-serif;
+
+    animation: repEntrada .3s ease;
+}
+
+.reportes-page * {
+    box-sizing: border-box;
+}
+
+.reportes-page button,
+.reportes-page input,
+.reportes-page select {
+    font: inherit;
+}
+
+/* Animación de entrada */
+
+@keyframes repEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Texto superior */
+
+.rep-eyebrow {
+    display: block;
+    color: #91a0ad;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   BANNER DE INTRODUCCIÓN
+========================================= */
+
+.rep-intro-banner {
+    position: relative;
+
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+    margin: 18px 0 17px;
+    padding: 22px 25px;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e9ef;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        110deg,
+        #f7fafc 0%,
+        #eff5f9 72%,
+        #e8f0f6 100%
+    );
+}
+
+.rep-intro-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+}
+
+.rep-intro-copy h2 {
+    margin: 4px 0 5px;
+
+    color: #344e65;
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -.35px;
+}
+
+.rep-intro-copy p {
+    max-width: 610px;
+    margin: 0;
+
+    color: #8293a2;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+/* Elemento decorativo */
+
+.rep-intro-art {
+    position: absolute;
+    right: 205px;
+    top: -35px;
+
+    width: 185px;
+    height: 185px;
+
+    display: grid;
+    place-items: center;
+
+    color: #6686a2;
+    opacity: .48;
+}
+
+.rep-intro-art::before,
+.rep-intro-art::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(91, 126, 154, .25);
+    border-radius: 50%;
+}
+
+.rep-intro-art::before {
+    width: 160px;
+    height: 160px;
+}
+
+.rep-intro-art::after {
+    width: 116px;
+    height: 116px;
+}
+
+.rep-intro-art > span {
+    position: relative;
+    z-index: 1;
+
+    font-size: 65px;
+}
+
+.rep-intro-art > i {
+    position: absolute;
+    z-index: 1;
+
+    top: 39px;
+    right: 24px;
+
+    font-size: 26px;
+    font-style: normal;
+}
+
+/* Selector de periodo */
+
+.rep-intro-period {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+    padding: 8px 10px;
+
+    border: 1px solid #dce6ed;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, .8);
+
+    color: #69829a;
+    font-size: 8px;
+    white-space: nowrap;
+}
+
+.rep-intro-period .material-symbols-rounded {
+    font-size: 15px;
+}
+
+/* =========================================
+   MENSAJES DE RETROALIMENTACIÓN
+========================================= */
+
+.rep-feedback {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    margin: 12px 0;
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    font-size: 9px;
+}
+
+.rep-feedback.error {
+    border: 1px solid #efd9d9;
+    background: #fff3f2;
+    color: #a95559;
+}
+
+.rep-feedback button {
+    margin-left: auto;
+
+    border: 1px solid #e8cece;
+    border-radius: 6px;
+
+    padding: 5px 8px;
+
+    background: #fff;
+    color: #a95559;
+
+    cursor: pointer;
+    font-size: 8px;
+}
+
+/* =========================================
+   PANEL DE FILTROS
+========================================= */
+
+.rep-filter-panel {
+    margin-bottom: 21px;
+    padding: 14px 16px;
+
+    border: 1px solid #e4ebf0;
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow: 0 3px 12px rgba(37, 57, 77, .025);
+}
+
+/* Encabezado de filtros */
+
+.rep-filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 11px;
+}
+
+.rep-filter-heading strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #526a80;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.rep-filter-heading > .material-symbols-rounded {
+    color: #8098ac;
+    font-size: 20px;
+}
+
+/* Campos de filtros */
+
+.rep-filter-fields {
+    display: grid;
+
+    grid-template-columns:
+        155px
+        155px
+        minmax(220px, 1fr)
+        auto;
+
+    align-items: end;
+    gap: 10px;
+}
+
+.rep-filter-fields label {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.rep-filter-fields label > span {
+    color: #71869a;
+    font-size: 8px;
+    font-weight: 650;
+}
+
+/* Inputs y selectores */
+
+.rep-filter-fields input,
+.rep-filter-fields select {
+    width: 100%;
+    height: 34px;
+
+    padding: 0 9px;
+
+    border: 1px solid #e2e9ef;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fff;
+    color: #526b80;
+
+    font-size: 8px;
+}
+
+.rep-filter-fields input:focus,
+.rep-filter-fields select:focus {
+    border-color: #9bb2c5;
+
+    box-shadow: 0 0 0 3px rgba(88, 126, 158, .1);
+}
+
+/* Acciones de filtros */
+
+.rep-filter-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.rep-button,
+.rep-export-button {
+    height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+    padding: 0 11px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    font-size: 8px;
+    font-weight: 650;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: .18s ease;
+}
+
+.rep-button .material-symbols-rounded,
+.rep-export-button .material-symbols-rounded {
+    font-size: 15px;
+}
+
+/* Botón principal */
+
+.rep-button.primary {
+    color: #fff;
+
+    background: linear-gradient(
+        110deg,
+        #344f68,
+        #5d7c97
+    );
+
+    box-shadow: 0 3px 8px rgba(46, 72, 96, .13);
+}
+
+.rep-button.primary:hover {
+    background: linear-gradient(
+        110deg,
+        #2b435a,
+        #4e6e89
+    );
+}
+
+/* Botones secundarios */
+
+.rep-button.light,
+.rep-export-button {
+    border-color: #e1e8ee;
+
+    background: #fff;
+    color: #688097;
+}
+
+.rep-button.light:hover,
+.rep-export-button:hover {
+    background: #f4f8fa;
+    border-color: #cfdae3;
+}
+
+/* Botones deshabilitados */
+
+.rep-button:disabled,
+.rep-export-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   ENCABEZADOS DE SECCIÓN
+========================================= */
+
+.rep-section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 12px;
+    margin: 5px 1px 12px;
+}
+
+.rep-section-head h2 {
+    margin: 3px 0;
+
+    color: #344c62;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.rep-section-head p {
+    margin: 0;
+
+    color: #8b9aa7;
+    font-size: 8px;
+}
+
+.rep-export-button {
+    height: 31px;
+}
+
+/* =========================================
+   TARJETAS KPI
+========================================= */
+
+.rep-kpi-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 11px;
+    margin-bottom: 14px;
+}
+
+.rep-kpi-card {
+    min-width: 0;
+    min-height: 89px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+    padding: 13px;
+
+    border: 1px solid #e5ebf0;
+    border-radius: 11px;
+
+    background: #fff;
+}
+
+/* Iconos KPI */
+
+.rep-kpi-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #edf3f8;
+    color: #5b7d9b;
+
+    font-size: 19px;
+}
+
+.rep-kpi-icon.slate {
+    background: #eef2f5;
+    color: #657d92;
+}
+
+.rep-kpi-icon.sky {
+    background: #edf5fa;
+    color: #5984a4;
+}
+
+.rep-kpi-icon.rose {
+    background: #fff1f0;
+    color: #b75e62;
+}
+
+/* Contenido KPI */
+
+.rep-kpi-card > div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.rep-kpi-card small {
+    color: #8796a4;
+    font-size: 8px;
+}
+
+.rep-kpi-card strong {
+    color: #354f67;
+
+    font-size: 21px;
+    font-weight: 650;
+    letter-spacing: -.45px;
+    line-height: 1.2;
+}
+
+.rep-kpi-card em {
+    overflow: hidden;
+
+    color: #a0acb6;
+    font-size: 7px;
+    font-style: normal;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* =========================================
+   TARJETAS GENERALES
+========================================= */
+
+.rep-card {
+    min-width: 0;
+
+    padding: 15px 16px;
+
+    border: 1px solid #e5ebf0;
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow: 0 3px 11px rgba(37, 57, 77, .022);
+}
+
+/* Encabezado de tarjeta */
+
+.rep-card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.rep-card-heading h2 {
+    margin: 3px 0 3px;
+
+    color: #3b5369;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.rep-card-heading p {
+    margin: 0;
+
+    color: #909eaa;
+    font-size: 7px;
+    line-height: 1.6;
+}
+
+/* Icono de tarjeta */
+
+.rep-card-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #edf3f8;
+    color: #6887a2;
+
+    font-size: 17px;
+}
+
+/* =========================================
+   DISTRIBUCIÓN DE ANALÍTICAS
+========================================= */
+
+.rep-analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(240px, .65fr);
+
+    gap: 12px;
+    margin-bottom: 13px;
+}
+
+/* =========================================
+   LEYENDA DE GRÁFICAS
+========================================= */
+
+.rep-chart-legend {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+    margin: 1px 0 9px;
+}
+
+.rep-chart-legend > span {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #8494a1;
+    font-size: 7px;
+}
+
+.rep-chart-legend i {
+    width: 9px;
+    height: 9px;
+
+    display: inline-block;
+
+    border-radius: 3px;
+}
+
+.legend-target {
+    background: #cbd8e2;
+}
+
+.legend-applied {
+    background: #547894;
+}
+
+/* =========================================
+   GRÁFICA MENSUAL
+========================================= */
+
+.rep-month-chart {
+    height: 178px;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(42px, 1fr)
+    );
+
+    align-items: end;
+
+    gap: 9px;
+    padding: 3px 3px 0;
+
+    border-bottom: 1px solid #e8edf1;
+}
+
+/* Columnas de la gráfica */
+
+.rep-month-column {
+    min-width: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 5px;
+}
+
+/* Valores de cada mes */
+
+.rep-month-values {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    white-space: nowrap;
+}
+
+.rep-month-values strong {
+    color: #58738c;
+    font-size: 7px;
+    font-weight: 650;
+}
+
+.rep-month-values small {
+    color: #a0acb7;
+    font-size: 6px;
+}
+
+/* Área de barras */
+
+.rep-bars-area {
+    width: 100%;
+    max-width: 38px;
+    height: 130px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 4px;
+
+    border-bottom: 1px solid #e9eef2;
+}
+
+/* Barras */
+
+.rep-month-bar {
+    width: 11px;
+    min-height: 0;
+
+    border-radius: 4px 4px 0 0;
+
+    transition: height .25s;
+}
+
+.rep-month-bar.target {
+    background: #cbd8e2;
+}
+
+.rep-month-bar.applied {
+    background: linear-gradient(
+        180deg,
+        #6f8da7,
+        #496e8c
+    );
+}
+
+/* Etiquetas y notas */
+
+.rep-month-label {
+    max-width: 100%;
+    overflow: hidden;
+
+    color: #8796a3;
+    font-size: 7px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rep-chart-footnote {
+    margin-top: 10px;
+
+    color: #9aa6b1;
+    font-size: 7px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   RESUMEN LATERAL
+========================================= */
+
+.rep-side-summary h2 {
+    margin: 3px 0 13px;
+
+    color: #3b5369;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+/* Filas de balance */
+
+.rep-balance-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+    padding: 8px 0;
+
+    border-top: 1px solid #f0f3f5;
+
+    color: #8998a5;
+    font-size: 8px;
+}
+
+.rep-balance-row strong {
+    color: #526d85;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+/* Alertas de balance */
+
+.rep-balance-alert {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+    margin-top: 8px;
+    padding: 10px;
+
+    border: 1px solid #e4ebf0;
+    border-radius: 9px;
+
+    background: #f7fafc;
+    color: #587991;
+}
+
+.rep-balance-alert.danger {
+    border-color: #efd6d5;
+
+    background: #fff4f3;
+    color: #b45a5e;
+}
+
+.rep-balance-alert .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.rep-balance-alert div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.rep-balance-alert small {
+    color: #8999a6;
+    font-size: 7px;
+}
+
+.rep-balance-alert strong {
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.rep-distance-note {
+    display: block;
+    margin-top: 8px;
+    color: #9aa7b2;
+    font-size: 7px;
+}
+
+/* =========================================
+   TABLAS
+========================================= */
+
+.rep-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.rep-table {
+    width: 100%;
+
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+/* Encabezados */
+
+.rep-table th {
+    padding: 9px 8px;
+
+    border-top: 1px solid #edf1f4;
+    border-bottom: 1px solid #edf1f4;
+
+    background: #f8fafb;
+    color: #8e9da9;
+
+    font-size: 7px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Celdas */
+
+.rep-table td {
+    padding: 9px 8px;
+
+    border-bottom: 1px solid #f0f3f5;
+
+    color: #63798c;
+    font-size: 8px;
+
+    vertical-align: middle;
+}
+
+.rep-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.rep-table tbody tr:hover {
+    background: #fbfcfd;
+}
+
+/* Información de nombres */
+
+.rep-name-cell {
+    min-width: 175px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    white-space: normal;
+}
+
+.rep-name-cell strong {
+    color: #526e86;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.rep-name-cell span {
+    color: #455e74;
+    font-size: 8px;
+    line-height: 1.45;
+}
+
+.rep-name-cell small {
+    color: #9aa7b1;
+    font-size: 7px;
+}
+
+/* Números destacados */
+
+.rep-number-strong {
+    color: #456b89 !important;
+    font-weight: 700;
+}
+
+/* Barras de progreso */
+
+.rep-progress-cell {
+    min-width: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.rep-progress-track {
+    width: 65px;
+    height: 5px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+    background: #edf1f4;
+}
+
+.rep-progress-track span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #6e8ca6,
+        #476c8b
+    );
+}
+
+.rep-progress-cell b {
+    color: #607d96;
+    font-size: 8px;
+}
+
+/* Referencias y porcentajes */
+
+.rep-campaign-ref {
+    color: #607e98;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.rep-percent-pill {
+    display: inline-block;
+
+    padding: 4px 7px;
+
+    border-radius: 15px;
+
+    background: #edf3f8;
+    color: #597994;
+
+    font-size: 7px;
+    font-weight: 650;
+}
+
+/* =========================================
+   CUADRÍCULA INFERIOR
+========================================= */
+
+.rep-lower-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
+
+    gap: 12px;
+    margin-top: 13px;
+}
+
+/* =========================================
+   LISTA DE LOCALIDADES
+========================================= */
+
+.rep-locality-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.rep-locality-row {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.rep-locality-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 9px;
+}
+
+.rep-locality-heading > div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.rep-locality-heading strong {
+    color: #4c657b;
+    font-size: 8px;
+    font-weight: 650;
+}
+
+.rep-locality-heading small {
+    color: #9aa6b0;
+    font-size: 7px;
+}
+
+.rep-locality-heading > b {
+    color: #55748e;
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+.rep-locality-heading > b small {
+    color: #98a6b1;
+    font-size: 7px;
+    font-weight: 500;
+}
+
+/* Progreso de localidades */
+
+.rep-locality-track {
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+    background: #edf1f4;
+}
+
+.rep-locality-track span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #7996ad,
+        #4d7391
+    );
+}
+
+/* Pie de localidad */
+
+.rep-locality-foot {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    color: #a0abb5;
+    font-size: 7px;
+}
+
+.rep-locality-foot strong {
+    color: #70889d;
+    font-size: 7px;
+    font-weight: 650;
+}
+
+/* =========================================
+   INVENTARIO
+========================================= */
+
+.rep-inventory-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, .85fr);
+
+    gap: 12px;
+    margin-top: 13px;
+}
+
+.rep-biologic-list,
+.rep-supply-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   LISTA DE BIOLÓGICOS
+========================================= */
+
+.rep-biologic-row {
+    padding: 10px 0;
+
+    border-top: 1px solid #eff2f5;
+}
+
+.rep-biologic-row:first-child,
+.rep-supply-row:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.rep-biologic-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.rep-biologic-top > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.rep-biologic-top strong {
+    color: #506b83;
+    font-size: 8px;
+}
+
+.rep-biologic-top small {
+    color: #9aa6b1;
+    font-size: 7px;
+}
+
+.rep-biologic-top > b {
+    color: #486a86;
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.rep-biologic-top > b small {
+    color: #98a5af;
+    font-size: 7px;
+    font-weight: 500;
+}
+
+/* Detalles */
+
+.rep-biologic-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 7px;
+
+    color: #98a5b0;
+    font-size: 7px;
+}
+
+.rep-biologic-details b {
+    margin-left: 3px;
+
+    color: #627c93;
+    font-size: 8px;
+}
+
+/* =========================================
+   ADVERTENCIAS E INFORMACIÓN
+========================================= */
+
+.rep-inline-warning,
+.rep-inline-info {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+    margin-top: 6px;
+    padding: 6px 8px;
+
+    border-radius: 7px;
+
+    background: #fff2f1;
+    color: #ad565a;
+
+    font-size: 7px;
+}
+
+.rep-inline-info {
+    background: #f1f5f8;
+    color: #607e98;
+}
+
+.rep-inline-warning .material-symbols-rounded,
+.rep-inline-info .material-symbols-rounded {
+    font-size: 14px;
+}
+
+/* =========================================
+   LISTA DE SUMINISTROS
+========================================= */
+
+.rep-supply-row {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    padding: 10px 0;
+
+    border-top: 1px solid #eff2f5;
+}
+
+/* Icono de advertencia */
+
+.rep-supply-warning {
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #fff2ed;
+    color: #b96852;
+
+    font-size: 16px;
+}
+
+/* Contenido de suministro */
+
+.rep-supply-row > div {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.rep-supply-row strong {
+    color: #566e82;
+    font-size: 8px;
+}
+
+.rep-supply-row small {
+    color: #9aa6b0;
+    font-size: 7px;
+}
+
+.rep-supply-row > b {
+    color: #a56f38;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.rep-supply-row > b small {
+    font-weight: 500;
+}
+
+/* =========================================
+   ESTADOS VACÍOS
+========================================= */
+
+.rep-empty {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: #99a6b1;
+    font-size: 8px;
+
+    text-align: center;
+}
+
+.rep-empty .material-symbols-rounded {
+    color: #8fa4b6;
+    font-size: 24px;
+}
+
+/* =========================================
+   ESTADO DE CARGA
+========================================= */
+
+.rep-loading {
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: #8c9ba8;
+    font-size: 9px;
+}
+
+.rep-loading strong {
+    color: #4f687e;
+    font-size: 11px;
+}
+
+.rep-loading small {
+    color: #a0abb5;
+    font-size: 8px;
+}
+
+/* Animación del indicador de carga */
+
+.rep-spinner {
+    width: 24px;
+    height: 24px;
+
+    border: 3px solid #e7edf2;
+    border-top-color: #6687a3;
+
+    border-radius: 50%;
+
+    animation: repGiro .8s linear infinite;
+}
+
+@keyframes repGiro {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   NOTA FINAL DEL REPORTE
+========================================= */
+
+.rep-report-foot {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 7px;
+    margin: 13px 3px 0;
+
+    color: #95a2ad;
+    font-size: 7px;
+    line-height: 1.7;
+}
+
+.rep-report-foot .material-symbols-rounded {
+    color: #829bb0;
+    font-size: 15px;
+
+    flex-shrink: 0;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+.rep-footer {
+    margin-top: 22px;
+    padding-top: 13px;
+
+    border-top: 1px solid #e5ebf0;
+
+    color: #a0acb7;
+    font-size: 8px;
+
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET Y PANTALLAS MEDIANAS
+========================================= */
+
+@media (max-width: 1150px) {
+
+    .rep-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rep-analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rep-lower-grid,
+    .rep-inventory-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.reportes-page {
+    --rep-ink: #30465c;
+    --rep-muted: #8796a4;
+    --rep-line: #e6ecf1;
+    --rep-blue: #456d8e;
+
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+    padding-bottom: 36px;
+
+    color: var(--rep-ink);
+    font-family: "Poppins", sans-serif;
+
+    animation: repEntrada .3s ease;
+}
+
+.reportes-page * {
+    box-sizing: border-box;
+}
+
+.reportes-page button,
+.reportes-page input,
+.reportes-page select {
+    font: inherit;
+}
+
+/* Animación de entrada */
+
+@keyframes repEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Texto superior */
+
+.rep-eyebrow {
+    display: block;
+    color: #91a0ad;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   BANNER DE INTRODUCCIÓN
+========================================= */
+
+.rep-intro-banner {
+    position: relative;
+
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+    margin: 18px 0 17px;
+    padding: 22px 25px;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e9ef;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        110deg,
+        #f7fafc 0%,
+        #eff5f9 72%,
+        #e8f0f6 100%
+    );
+}
+
+.rep-intro-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+}
+
+.rep-intro-copy h2 {
+    margin: 4px 0 5px;
+
+    color: #344e65;
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -.35px;
+}
+
+.rep-intro-copy p {
+    max-width: 610px;
+    margin: 0;
+
+    color: #8293a2;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Elemento decorativo */
+
+.rep-intro-art {
+    position: absolute;
+    right: 205px;
+    top: -35px;
+
+    width: 185px;
+    height: 185px;
+
+    display: grid;
+    place-items: center;
+
+    color: #6686a2;
+    opacity: .48;
+}
+
+.rep-intro-art::before,
+.rep-intro-art::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(91, 126, 154, .25);
+    border-radius: 50%;
+}
+
+/* Textos generales */
+
+.rep-eyebrow {
+    font-size: 10px;
+}
+
+/* Banner de introducción */
+
+.rep-intro-copy p {
+    font-size: 11px;
+}
+
+.rep-intro-period {
+    font-size: 10px;
+}
+
+/* Mensajes */
+
+.rep-feedback {
+    font-size: 11px;
+}
+
+.rep-feedback button {
+    font-size: 10px;
+}
+
+/* Filtros */
+
+.rep-filter-heading strong {
+    font-size: 12px;
+}
+
+.rep-filter-fields label > span {
+    font-size: 10px;
+}
+
+.rep-filter-fields input,
+.rep-filter-fields select {
+    font-size: 10px;
+}
+
+/* Botones */
+
+.rep-button,
+.rep-export-button {
+    font-size: 10px;
+}
+
+/* Encabezados */
+
+.rep-section-head p {
+    font-size: 10px;
+}
+
+/* Tarjetas KPI */
+
+.rep-kpi-card small {
+    font-size: 10px;
+}
+
+.rep-kpi-card em {
+    font-size: 9px;
+}
+
+/* Encabezados de tarjetas */
+
+.rep-card-heading p {
+    font-size: 9px;
+}
+
+/* Gráficas */
+
+.rep-chart-legend > span {
+    font-size: 9px;
+}
+
+.rep-month-values strong {
+    font-size: 9px;
+}
+
+.rep-month-values small {
+    font-size: 8px;
+}
+
+.rep-month-label {
+    font-size: 9px;
+}
+
+.rep-chart-footnote {
+    font-size: 9px;
+}
+
+/* Resumen financiero */
+
+.rep-balance-row {
+    font-size: 10px;
+}
+
+.rep-balance-alert small {
+    font-size: 9px;
+}
+
+/* Tablas */
+
+.rep-table th {
+    font-size: 9px;
+}
+
+.rep-table td {
+    font-size: 10px;
+}
+
+.rep-name-cell strong,
+.rep-name-cell span {
+    font-size: 10px;
+}
+
+.rep-name-cell small {
+    font-size: 9px;
+}
+
+.rep-progress-cell b {
+    font-size: 10px;
+}
+
+.rep-campaign-ref {
+    font-size: 10px;
+}
+
+.rep-percent-pill {
+    font-size: 9px;
+}
+
+/* Localidades */
+
+.rep-locality-heading strong {
+    font-size: 10px;
+}
+
+.rep-locality-heading small {
+    font-size: 9px;
+}
+
+.rep-locality-foot {
+    font-size: 9px;
+}
+
+.rep-locality-foot strong {
+    font-size: 9px;
+}
+
+/* Inventario */
+
+.rep-biologic-top strong {
+    font-size: 10px;
+}
+
+.rep-biologic-top small {
+    font-size: 9px;
+}
+
+.rep-biologic-details {
+    font-size: 9px;
+}
+
+.rep-inline-warning,
+.rep-inline-info {
+    font-size: 9px;
+}
+
+/* Suministros */
+
+.rep-supply-row strong {
+    font-size: 10px;
+}
+
+.rep-supply-row small {
+    font-size: 9px;
+}
+
+/* Estados vacíos y carga */
+
+.rep-empty {
+    font-size: 10px;
+}
+
+.rep-loading {
+    font-size: 11px;
+}
+
+.rep-loading small {
+    font-size: 10px;
+}
+
+/* Pie del reporte */
+
+.rep-report-foot {
+    font-size: 9px;
+}
+
+.rep-footer {
+    font-size: 10px;
+}
+
+/* Nota de distancia */
+
+.rep-distance-note {
+    font-size: 9px;
+}
+
+/* Textos generales */
+
+.rep-eyebrow {
+    font-size: 12px;
+}
+
+/* Banner */
+
+.rep-intro-copy p {
+    font-size: 13px;
+}
+
+.rep-intro-period {
+    font-size: 12px;
+}
+
+/* Mensajes */
+
+.rep-feedback {
+    font-size: 13px;
+}
+
+.rep-feedback button {
+    font-size: 12px;
+}
+
+/* Filtros */
+
+.rep-filter-fields label > span {
+    font-size: 12px;
+}
+
+.rep-filter-fields input,
+.rep-filter-fields select {
+    font-size: 12px;
+}
+
+/* Botones */
+
+.rep-button,
+.rep-export-button {
+    font-size: 12px;
+}
+
+/* Encabezados */
+
+.rep-section-head p {
+    font-size: 12px;
+}
+
+/* Tarjetas KPI */
+
+.rep-kpi-card small {
+    font-size: 12px;
+}
+
+.rep-kpi-card em {
+    font-size: 11px;
+}
+
+/* Encabezados de tarjetas */
+
+.rep-card-heading p {
+    font-size: 11px;
+}
+
+/* Gráficas */
+
+.rep-chart-legend > span {
+    font-size: 11px;
+}
+
+.rep-month-values strong {
+    font-size: 11px;
+}
+
+.rep-month-values small {
+    font-size: 10px;
+}
+
+.rep-month-label {
+    font-size: 11px;
+}
+
+.rep-chart-footnote {
+    font-size: 11px;
+}
+
+/* Resumen financiero */
+
+.rep-balance-row {
+    font-size: 12px;
+}
+
+.rep-balance-alert small {
+    font-size: 11px;
+}
+
+/* Tablas */
+
+.rep-table th {
+    font-size: 11px;
+}
+
+.rep-table td {
+    font-size: 12px;
+}
+
+.rep-name-cell strong,
+.rep-name-cell span {
+    font-size: 12px;
+}
+
+.rep-name-cell small {
+    font-size: 11px;
+}
+
+.rep-progress-cell b {
+    font-size: 12px;
+}
+
+.rep-campaign-ref {
+    font-size: 12px;
+}
+
+.rep-percent-pill {
+    font-size: 11px;
+}
+
+/* Localidades */
+
+.rep-locality-heading strong {
+    font-size: 12px;
+}
+
+.rep-locality-heading small {
+    font-size: 11px;
+}
+
+.rep-locality-foot {
+    font-size: 11px;
+}
+
+.rep-locality-foot strong {
+    font-size: 11px;
+}
+
+/* Inventario */
+
+.rep-biologic-top strong {
+    font-size: 12px;
+}
+
+.rep-biologic-top small {
+    font-size: 11px;
+}
+
+.rep-biologic-details {
+    font-size: 11px;
+}
+
+.rep-inline-warning,
+.rep-inline-info {
+    font-size: 11px;
+}
+
+/* Suministros */
+
+.rep-supply-row strong {
+    font-size: 12px;
+}
+
+.rep-supply-row small {
+    font-size: 11px;
+}
+
+/* Estados */
+
+.rep-empty {
+    font-size: 12px;
+}
+
+.rep-loading small {
+    font-size: 12px;
+}
+
+/* Pie del reporte */
+
+.rep-report-foot {
+    font-size: 11px;
+}
+
+.rep-distance-note {
+    font-size: 11px;
+}
+
+.rep-section-head .rep-eyebrow {
+    font-size: 13px;
+}
+
+.rep-section-head h2 {
+    font-size: 16px;
+}
+
+.rep-section-head p {
+    font-size: 13px;
+}
+
+/* Estilo base */
+
+.rep-filter-actions .rep-button {
+    min-height: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 16px;
+    border-radius: 9px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Iconos */
+
+.rep-filter-actions .rep-button .material-symbols-rounded {
+    font-size: 19px;
+}
+
+/* =========================================
+   APLICAR FILTROS - PRINCIPAL
+========================================= */
+
+.rep-filter-actions .rep-button.primary {
+    border: 1px solid #263f59;
+    background: linear-gradient(
+        135deg,
+        #304e69,
+        #20394f
+    );
+
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(35, 60, 82, 0.16);
+}
+
+.rep-filter-actions .rep-button.primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #3e617f;
+    box-shadow: 0 6px 13px rgba(35, 60, 82, 0.18);
+}
+
+/* =========================================
+   RESTABLECER - SECUNDARIO
+========================================= */
+
+.rep-filter-actions .rep-button.light {
+    border: 1px solid #dce5ed;
+    background: #ffffff;
+    color: #496984;
+    box-shadow: 0 3px 9px rgba(35, 55, 80, 0.045);
+}
+
+.rep-filter-actions .rep-button.light:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: #a9bfd1;
+    background: #f3f7fa;
+}
+
+/* =========================================
+   ESTADO DESHABILITADO
+========================================= */
+
+.rep-filter-actions .rep-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Reducir altura */
+
+.rep-filter-actions .rep-button {
+    min-height: 34px;
+    height: 34px;
+    padding: 0 14px;
+    box-shadow: none !important;
+}
+
+/* Botón principal */
+
+.rep-filter-actions .rep-button.primary {
+    background: linear-gradient(135deg, #304e69, #20394f);
+    border: 1px solid #263f59;
+    color: #fff;
+    box-shadow: none !important;
+}
+
+.rep-filter-actions .rep-button.primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: #3e617f;
+    box-shadow: none !important;
+}
+
+/* Botón secundario */
+
+.rep-filter-actions .rep-button.light {
+    background: #fff;
+    border: 1px solid #dce5ed;
+    color: #496984;
+    box-shadow: none !important;
+}
+
+.rep-filter-actions .rep-button.light:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: #a9bfd1;
+    background: #f3f7fa;
+    box-shadow: none !important;
+}
+
+/* Eliminar sombras al enfocar o seleccionar */
+
+.rep-filter-actions .rep-button:focus,
+.rep-filter-actions .rep-button:focus-visible,
+.rep-filter-actions .rep-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Estado deshabilitado */
+
+.rep-filter-actions .rep-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none !important;
+}
+
+/* Iconos */
+
+.rep-filter-actions .rep-button .material-symbols-rounded {
+    font-size: 17px;
+}
+
+/* Campos de fecha, texto y selectores */
+
+.rep-filter-fields input,
+.rep-filter-fields select,
+.rep-filter-fields textarea {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Al seleccionar o hacer clic */
+
+.rep-filter-fields input:focus,
+.rep-filter-fields input:focus-visible,
+.rep-filter-fields select:focus,
+.rep-filter-fields select:focus-visible,
+.rep-filter-fields textarea:focus,
+.rep-filter-fields textarea:focus-visible {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: #cbd7e1;
+}
+
+/* Al pasar el cursor */
+
+.rep-filter-fields input:hover,
+.rep-filter-fields select:hover,
+.rep-filter-fields textarea:hover {
+    box-shadow: none !important;
+}
+
+/* Cuando se está escribiendo */
+
+.rep-filter-fields input:active,
+.rep-filter-fields select:active,
+.rep-filter-fields textarea:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.rep-section-head .rep-export-button {
+    min-height: 34px;
+    height: 34px;
+    padding: 0 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid #dce5ed;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #496984;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    box-shadow: none !important;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Icono */
+
+.rep-section-head .rep-export-button .material-symbols-rounded {
+    font-size: 17px;
+}
+
+/* Hover */
+
+.rep-section-head .rep-export-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: #a9bfd1;
+    background: #f3f7fa;
+    box-shadow: none !important;
+}
+
+/* Focus y selección */
+
+.rep-section-head .rep-export-button:focus,
+.rep-section-head .rep-export-button:focus-visible,
+.rep-section-head .rep-export-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Deshabilitado */
+
+.rep-section-head .rep-export-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none !important;
+}
+
+/* Centrar iconos dentro de su cuadro */
+
+.rep-kpi-card > .rep-kpi-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 36px;
+    height: 36px;
+
+    line-height: 36px !important;
+    padding: 0 !important;
+
+    font-size: 19px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+
+    position: relative;
+    top: 0;
+    transform: none;
+}
+
+/* Ajuste específico del glifo */
+
+.rep-kpi-card > .rep-kpi-icon::before {
+    line-height: 1 !important;
+}
+
+/* Etiqueta superior */
+
+.rep-card-heading .rep-eyebrow {
+    font-size: 15px;
+}
+
+/* Título Actividad mensual */
+
+.rep-card-heading h2 {
+    font-size: 15px;
+}
+
+/* Descripción */
+
+.rep-card-heading p {
+    font-size: 12px;
+}
+
+/* Icono de la tarjeta */
+
+.rep-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    line-height: 1 !important;
+    padding: 0;
+
+    font-size: 18px;
+
+    transform: translateY(1px);
+}
+
+.rep-month-values strong {
+    font-size: 13px;
+}
+
+.rep-month-values small {
+    font-size: 12px;
+}
+
+.rep-balance-row strong {
+    font-size: 12.5px;
+}
+
+/* Etiqueta superior */
+.rep-lower-grid .rep-card-heading .rep-eyebrow {
+    font-size: 14px;
+}
+
+/* Título */
+.rep-lower-grid .rep-card-heading h2 {
+    font-size: 13px;
+}
+
+/* Descripción */
+.rep-lower-grid .rep-card-heading p {
+    font-size: 11px;
+}
+
+/* Nombre de localidad */
+.rep-locality-heading strong {
+    font-size: 13px;
+}
+
+/* Código, visitas y jornadas */
+.rep-locality-heading small {
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+    .rep-kpi-card > .rep-kpi-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px !important;
+    }
+}
+
+.rep-kpi-card strong {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.rep-locality-heading > b {
+    font-size: 13px;
+}
+
+/* Objetivo y porcentaje */
+.rep-locality-heading > b small {
+    font-size: 11px;
+}
+
+/* Avance del objetivo */
+.rep-locality-foot {
+    font-size: 12px;
+}
+
+.rep-locality-foot strong {
+    font-size: 12px;
+}
+
+/* Etiqueta superior */
+.rep-inventory-grid .rep-card-heading .rep-eyebrow {
+    font-size: 14px;
+}
+
+/* Título Control de biológicos */
+.rep-inventory-grid .rep-card-heading h2 {
+    font-size: 13px;
+}
+
+/* Descripción */
+.rep-inventory-grid .rep-card-heading p {
+    font-size: 11px;
+}
+
+/* Código y nombre del biológico */
+.rep-biologic-top strong {
+    font-size: 13px;
+}
+
+/* Nombre de campaña */
+.rep-biologic-top small {
+    font-size: 12px;
+}
+
+/* 819 en campaña: +3px */
+.rep-biologic-top > b {
+    font-size: 13px;
+}
+
+/* Recibidas, aplicadas y reserva: +2px */
+.rep-biologic-details {
+    font-size: 10px;
+}
+
+.rep-biologic-details b {
+    font-size: 10px;
+}
+
+/* Mensajes de advertencia */
+.rep-inline-warning,
+.rep-inline-info {
+    font-size: 9.5px;
+}
+
+.rep-biologic-top > b small {
+    font-size: 9px;
+}
+
+/* =========================================
+   RESPONSIVE - MÓVILES
+========================================= */
+
+@media (max-width: 750px) {
+
+    .rep-intro-banner {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 17px;
+    }
+
+    .rep-intro-art {
+        right: 20px;
+        opacity: .22;
+    }
+
+    .rep-filter-fields {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rep-campaign-filter {
+        grid-column: span 2;
+    }
+
+    .rep-filter-actions {
+        grid-column: span 2;
+    }
+
+    .rep-filter-actions .rep-button {
+        flex: 1;
+    }
+
+    .rep-section-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rep-export-button {
+        align-self: flex-end;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 500px) {
+
+    .rep-kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+    }
+
+    .rep-kpi-card {
+        min-height: 82px;
+
+        gap: 7px;
+        padding: 9px;
+    }
+
+    .rep-kpi-icon {
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+    .rep-kpi-card strong {
+        font-size: 18px;
+    }
+
+    .rep-month-chart {
+        gap: 4px;
+    }
+
+    .rep-month-values small {
+        display: none;
+    }
+
+    .rep-filter-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .rep-campaign-filter,
+    .rep-filter-actions {
+        grid-column: auto;
+    }
+
+    .rep-card {
+        padding: 13px 11px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .rep-filter-actions .rep-button {
+        min-height: 42px;
+        height: 42px;
+
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .rep-kpi-icon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+    }
+
+    .rep-kpi-card strong {
+        font-size: 16px;
+    }
+}

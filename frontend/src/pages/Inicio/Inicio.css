@@ -1,0 +1,1571 @@
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
+
+.inicio-page {
+  --inicio-ink: #30465c;
+  --inicio-muted: #8493a2;
+  --inicio-line: #e6ecf1;
+
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding-bottom: 34px;
+
+  color: var(--inicio-ink);
+  font-family: "Poppins", sans-serif;
+
+  animation: inicioEntrada .3s ease;
+}
+
+.inicio-page * {
+  box-sizing: border-box;
+}
+
+.inicio-page button {
+  font: inherit;
+}
+
+
+/* =========================================
+   2. ANIMACIÓN DE ENTRADA
+========================================= */
+
+@keyframes inicioEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   3. PANEL DE BIENVENIDA
+========================================= */
+
+/* Se conserva el bloque de bienvenida solicitado */
+
+.welcome-panel {
+  min-height: 210px;
+  padding: 30px 35px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(20, 38, 56, .94) 0%,
+      rgba(30, 54, 78, .84) 42%,
+      rgba(32, 56, 80, .38) 72%,
+      rgba(32, 56, 80, .12) 100%
+    ),
+    url("/img/banner-inicio.jpg") center 25% / cover no-repeat;
+
+  background-color: #263F59;
+
+  color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 8px 22px rgba(38, 63, 89, 0.12);
+}
+
+.welcome-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  font-weight: 600;
+  color: #D0DFEB;
+  text-shadow: 0 1px 6px rgba(13, 28, 43, .55);
+}
+
+.welcome-content h1 {
+  font-size: 27px;
+  font-weight: 600;
+  margin: 12px 0 7px;
+  letter-spacing: -0.7px;
+  text-shadow: 0 2px 12px rgba(13, 28, 43, .55);
+}
+
+.welcome-content p {
+  max-width: 560px;
+  color: #E0E9F0;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(13, 28, 43, .55);
+}
+
+.welcome-decoration {
+  width: 155px;
+  height: 155px;
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+
+  background: rgba(15, 34, 52, .3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  display: grid;
+  place-items: center;
+
+  margin-right: 35px;
+
+  position: relative;
+}
+
+.welcome-decoration::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+}
+
+.welcome-decoration .material-symbols-rounded {
+  font-size: 75px;
+  color: #E4EDF4;
+}
+
+
+/* =========================================
+   4. MENSAJES DE ERROR
+========================================= */
+
+.inicio-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 16px 0;
+  padding: 11px 13px;
+
+  border: 1px solid #f0d8d8;
+  border-radius: 9px;
+
+  background: #fff5f4;
+  color: #a95459;
+
+  font-size: 10px;
+}
+
+.inicio-error button {
+  margin-left: auto;
+
+  border: 1px solid #e9caca;
+  border-radius: 7px;
+
+  padding: 6px 10px;
+
+  background: #fff;
+  color: #a95459;
+
+  cursor: pointer;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   5. ENCABEZADO OPERATIVO
+========================================= */
+
+.inicio-operational-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin: 27px 1px 15px;
+}
+
+.inicio-eyebrow {
+  display: block;
+
+  color: #91a0ad;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.15px;
+  line-height: 1.5;
+}
+
+.inicio-operational-head h2 {
+  margin: 4px 0 3px;
+
+  color: #30465c;
+
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -.25px;
+}
+
+.inicio-operational-head p {
+  margin: 0;
+
+  color: #8997a5;
+  font-size: 9px;
+}
+
+.inicio-current-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #e2e9ef;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #72879a;
+
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.inicio-current-date .material-symbols-rounded {
+  color: #66839e;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   6. CUADRÍCULA DE MÉTRICAS
+========================================= */
+
+.inicio-metrics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.inicio-metric-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 104px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e5ebf0;
+  border-radius: 12px;
+
+  background: #fff;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    transform .18s,
+    border-color .18s,
+    box-shadow .18s;
+}
+
+.inicio-metric-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #c7d6e2;
+
+  box-shadow: 0 8px 20px rgba(39,61,82,.065);
+}
+
+.inicio-metric-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #edf3f8;
+  color: #587b99;
+
+  font-size: 20px;
+}
+
+.inicio-metric-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.inicio-metric-copy small {
+  color: #8292a1;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.inicio-metric-copy strong {
+  color: #304b64;
+
+  font-size: 23px;
+  font-weight: 650;
+  letter-spacing: -.5px;
+  line-height: 1.2;
+}
+
+.inicio-metric-copy em {
+  color: #a0acb7;
+
+  font-size: 8px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.inicio-metric-arrow {
+  position: absolute;
+
+  right: 12px;
+  bottom: 11px;
+
+  color: #a2b0bc;
+  font-size: 15px;
+}
+
+
+/* Variantes de colores de métricas */
+
+.inicio-metric-card.slate .inicio-metric-icon {
+  background: #eef1f5;
+  color: #63788d;
+}
+
+.inicio-metric-card.sky .inicio-metric-icon {
+  background: #edf5fa;
+  color: #5686a8;
+}
+
+.inicio-metric-card.rose .inicio-metric-icon {
+  background: #fff1f0;
+  color: #b86468;
+}
+
+
+/* =========================================
+   7. DISTRIBUCIÓN PRINCIPAL
+========================================= */
+
+.inicio-main-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(300px, .85fr);
+
+  gap: 14px;
+  margin-top: 15px;
+
+  align-items: stretch;
+}
+
+.inicio-secondary-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 14px;
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   8. TARJETAS GENERALES
+========================================= */
+
+.inicio-card {
+  min-width: 0;
+
+  padding: 17px 18px;
+
+  border: 1px solid #e5ebf0;
+  border-radius: 13px;
+
+  background: #fff;
+
+  box-shadow: 0 3px 12px rgba(37,57,77,.025);
+}
+
+.inicio-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.inicio-card-heading h2 {
+  margin: 3px 0 3px;
+
+  color: #344b61;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.inicio-card-heading p {
+  margin: 0;
+
+  color: #91a0ad;
+
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+.inicio-heading-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: #edf3f8;
+  color: #68849d;
+
+  font-size: 17px;
+}
+
+/* =========================================
+   9. LISTA DE AGENDA
+========================================= */
+
+.inicio-agenda-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.inicio-agenda-item {
+  display: grid;
+  grid-template-columns: 50px 12px minmax(0, 1fr);
+  gap: 9px;
+  padding: 9px 0 11px;
+  border-top: 1px solid #f0f3f6;
+}
+
+.inicio-agenda-item:first-child {
+  border-top: 0;
+  padding-top: 2px;
+}
+
+.inicio-agenda-time {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 2px;
+  text-align: right;
+}
+
+.inicio-agenda-time strong {
+  color: #526d85;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.inicio-agenda-time span {
+  color: #a0acb7;
+  font-size: 8px;
+}
+
+.inicio-agenda-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.inicio-agenda-marker::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  bottom: -14px;
+  width: 1px;
+  background: #dfe8ef;
+}
+
+.inicio-agenda-item:last-child .inicio-agenda-marker::before {
+  display: none;
+}
+
+.inicio-agenda-marker span {
+  position: relative;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #6687a3;
+  box-shadow: 0 0 0 1px #b8c9d7;
+}
+
+.inicio-agenda-info {
+  min-width: 0;
+}
+
+.inicio-agenda-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3px;
+}
+
+.inicio-agenda-meta > span:first-child {
+  color: #8299ad;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.inicio-status {
+  padding: 3px 6px;
+  border-radius: 20px;
+  background: #eef3f7;
+  color: #6e8498;
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.inicio-status.en_curso {
+  background: #eaf2f8;
+  color: #4d7698;
+}
+
+.inicio-status.completada {
+  background: #edf3f5;
+  color: #637f91;
+}
+
+.inicio-agenda-info > strong {
+  display: block;
+  color: #3c5268;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.inicio-agenda-info p {
+  margin: 2px 0;
+  color: #8393a1;
+  font-size: 8px;
+}
+
+.inicio-agenda-info > small {
+  display: block;
+  color: #a1adb7;
+  font-size: 7px;
+  line-height: 1.5;
+}
+
+.inicio-agenda-dose {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  color: #718ba1;
+  font-size: 7px;
+}
+
+.inicio-agenda-dose .material-symbols-rounded {
+  font-size: 13px;
+}
+
+
+/* =========================================
+   10. PRÓXIMAS ACTIVIDADES
+========================================= */
+
+.inicio-next-strip {
+  margin-top: 9px;
+  padding: 11px 12px;
+  border: 1px solid #e8eef3;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.inicio-next-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+  color: #58748e;
+}
+
+.inicio-next-title .material-symbols-rounded {
+  font-size: 15px;
+}
+
+.inicio-next-title strong {
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.inicio-next-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.inicio-next-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.inicio-next-item > span {
+  color: #64809a;
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.inicio-next-item div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inicio-next-item strong {
+  overflow: hidden;
+  color: #546b80;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inicio-next-item small {
+  color: #9aa7b3;
+  font-size: 7px;
+}
+
+
+/* =========================================
+   11. LISTA DE ALERTAS
+========================================= */
+
+.inicio-alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inicio-alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  width: 100%;
+  padding: 9px 8px;
+  border: 1px solid #edf1f4;
+  border-radius: 9px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: background .16s, border-color .16s;
+}
+
+.inicio-alert-item:hover {
+  background: #fafcfd;
+  border-color: #dfe7ed;
+}
+
+.inicio-alert-icon {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf3f8;
+  color: #60809c;
+  font-size: 17px;
+}
+
+/* Variantes de alertas */
+
+.inicio-alert-item.danger .inicio-alert-icon {
+  background: #fff0ef;
+  color: #b95e62;
+}
+
+.inicio-alert-item.warning .inicio-alert-icon {
+  background: #fff5e8;
+  color: #b18648;
+}
+
+.inicio-alert-item.success .inicio-alert-icon {
+  background: #eef4f6;
+  color: #628195;
+}
+
+.inicio-alert-copy {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.inicio-alert-copy strong {
+  color: #4a6075;
+  font-size: 8px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.inicio-alert-copy small {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #8998a5;
+  font-size: 7px;
+  line-height: 1.6;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.inicio-alert-copy em {
+  color: #a6b0ba;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.inicio-alert-arrow {
+  align-self: center;
+  color: #a4b1bc;
+  font-size: 16px;
+}
+
+
+/* Botones de enlace */
+
+.inicio-link-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 11px;
+  padding: 5px 0 0;
+  border: 0;
+  background: transparent;
+  color: #5a7b98;
+  font-size: 8px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.inicio-link-button .material-symbols-rounded {
+  font-size: 14px;
+}
+
+
+/* =========================================
+   12. LISTA DE ACTIVIDAD RECIENTE
+========================================= */
+
+.inicio-activity-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.inicio-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 9px 0;
+  border-top: 1px solid #f0f3f5;
+}
+
+.inicio-activity-item:first-child {
+  border-top: 0;
+  padding-top: 1px;
+}
+
+.inicio-activity-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #edf3f8;
+  color: #66849f;
+}
+
+.inicio-activity-icon.insumo {
+  background: #f0f3f6;
+  color: #75889a;
+}
+
+.inicio-activity-icon .material-symbols-rounded {
+  font-size: 16px;
+}
+
+.inicio-activity-copy {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inicio-activity-copy strong {
+  color: #536a7f;
+  font-size: 8px;
+  font-weight: 650;
+  text-transform: capitalize;
+}
+
+.inicio-activity-copy small {
+  overflow: hidden;
+  color: #8e9ca8;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inicio-activity-copy em {
+  color: #a7b1ba;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.inicio-activity-item > b {
+  color: #516f89;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+
+/* =========================================
+   13. ACCESOS DIRECTOS
+========================================= */
+
+.inicio-shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.inicio-shortcut {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  border: 1px solid #e9eef2;
+  border-radius: 9px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.inicio-shortcut:hover {
+  border-color: #cbd9e4;
+  background: #f9fbfc;
+  transform: translateY(-1px);
+}
+
+.inicio-shortcut-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf3f8;
+  color: #597b98;
+  font-size: 17px;
+}
+
+.inicio-shortcut > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inicio-shortcut strong {
+  color: #4d6479;
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.inicio-shortcut small {
+  overflow: hidden;
+  color: #9ba7b1;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inicio-shortcut > .material-symbols-rounded:last-child {
+  color: #a1afbb;
+  font-size: 15px;
+}
+
+/* =========================================
+   14. ESTADOS VACÍOS
+========================================= */
+
+.inicio-empty-state {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 12px;
+  color: #98a5b0;
+  text-align: center;
+}
+
+.inicio-empty-state.compact {
+  min-height: 180px;
+}
+
+.inicio-empty-state > .material-symbols-rounded {
+  color: #9aafbf;
+  font-size: 30px;
+}
+
+.inicio-empty-state strong {
+  color: #5b7185;
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.inicio-empty-state span:last-child {
+  color: #9aa7b2;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   15. ESTADO DE CARGA
+========================================= */
+
+.inicio-inline-loading {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #8b9aa7;
+  font-size: 9px;
+}
+
+.inicio-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #e7edf2;
+  border-top-color: #6888a3;
+  border-radius: 50%;
+  animation: inicioGiro .8s linear infinite;
+}
+
+
+/* Animación del indicador de carga */
+
+@keyframes inicioGiro {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   16. PIE DE PÁGINA
+========================================= */
+
+.inicio-footer {
+  margin-top: 24px;
+  padding-top: 13px;
+  border-top: 1px solid #e5ebf0;
+  color: #a0acb7;
+  font-size: 8px;
+  text-align: center;
+}
+
+
+/* =========================================
+   17. RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 1150px) {
+
+  .inicio-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inicio-main-grid,
+  .inicio-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================
+   20. AJUSTE GENERAL DEL TAMAÑO DE LETRA
+========================================= */
+
+/* Textos de 15px a 12px: +1px */
+
+.welcome-content h1 {
+  font-size: 28px;
+}
+
+.inicio-operational-head h2 {
+  font-size: 18px;
+}
+
+.inicio-metric-copy strong {
+  font-size: 24px;
+}
+
+.inicio-card-heading h2 {
+  font-size: 14px;
+}
+
+
+/* Textos menores de 12px: +3px */
+
+/* Bienvenida */
+.welcome-eyebrow {
+  font-size: 13px;
+}
+
+.welcome-content p {
+  font-size: 15px;
+}
+
+/* Errores */
+.inicio-error {
+  font-size: 13px;
+}
+
+.inicio-error button {
+  font-size: 12px;
+}
+
+/* Encabezado operativo */
+.inicio-eyebrow {
+  font-size: 11px;
+}
+
+.inicio-operational-head p {
+  font-size: 12px;
+}
+
+.inicio-current-date {
+  font-size: 12px;
+}
+
+/* Métricas */
+.inicio-metric-copy small {
+  font-size: 12px;
+}
+
+.inicio-metric-copy em {
+  font-size: 11px;
+}
+
+/* Encabezados de tarjetas */
+.inicio-card-heading p {
+  font-size: 11px;
+}
+
+/* Agenda */
+.inicio-agenda-time strong {
+  font-size: 13px;
+}
+
+.inicio-agenda-time span {
+  font-size: 11px;
+}
+
+.inicio-agenda-meta > span:first-child {
+  font-size: 10px;
+}
+
+.inicio-status {
+  font-size: 10px;
+}
+
+.inicio-agenda-info > strong {
+  font-size: 12px;
+}
+
+.inicio-agenda-info p {
+  font-size: 11px;
+}
+
+.inicio-agenda-info > small {
+  font-size: 10px;
+}
+
+.inicio-agenda-dose {
+  font-size: 10px;
+}
+
+/* Próximas actividades */
+.inicio-next-title strong {
+  font-size: 11px;
+}
+
+.inicio-next-item > span {
+  font-size: 11px;
+}
+
+.inicio-next-item strong {
+  font-size: 11px;
+}
+
+.inicio-next-item small {
+  font-size: 10px;
+}
+
+/* Alertas */
+.inicio-alert-copy strong {
+  font-size: 11px;
+}
+
+.inicio-alert-copy small {
+  font-size: 10px;
+}
+
+.inicio-alert-copy em {
+  font-size: 10px;
+}
+
+.inicio-link-button {
+  font-size: 11px;
+}
+
+/* Actividad reciente */
+.inicio-activity-copy strong {
+  font-size: 11px;
+}
+
+.inicio-activity-copy small {
+  font-size: 10px;
+}
+
+.inicio-activity-copy em {
+  font-size: 10px;
+}
+
+/* Accesos directos */
+.inicio-shortcut strong {
+  font-size: 11px;
+}
+
+.inicio-shortcut small {
+  font-size: 10px;
+}
+
+/* Estados vacíos */
+.inicio-empty-state strong {
+  font-size: 12px;
+}
+
+.inicio-empty-state span:last-child {
+  font-size: 11px;
+}
+
+/* Carga */
+.inicio-inline-loading {
+  font-size: 12px;
+}
+
+/* Pie de página */
+.inicio-footer {
+  font-size: 11px;
+}
+
+/* Descripción del panel de bienvenida */
+.welcome-content p {
+  font-size: 13px;
+}
+
+/* Etiqueta PANEL OPERATIVO */
+.inicio-operational-head .inicio-eyebrow {
+  font-size: 13px;
+}
+
+/* Descripción: Una vista rápida... */
+.inicio-operational-head p {
+  font-size: 13px;
+}
+
+/* Fecha actual */
+.inicio-current-date {
+  font-size: 13px;
+}
+
+/* Números de las métricas */
+.inicio-metric-copy strong {
+  font-size: 23px;
+}
+
+/* Descripciones debajo de los números */
+.inicio-metric-copy em {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.inicio-metric-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 0px !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+.inicio-metric-copy {
+  margin-left: 3px;
+}
+
+.inicio-metric-arrow {
+  bottom: auto !important;
+  top: 12px !important;
+}
+
+.inicio-agenda-card .inicio-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  line-height: 1;
+}
+
+/* Icono principal de notificaciones */
+.inicio-attention-card .inicio-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  line-height: 1;
+}
+
+/* Iconos de cada alerta */
+.inicio-attention-card .inicio-alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  line-height: 1;
+}
+
+/* Flechas de las alertas */
+.inicio-attention-card .inicio-alert-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  line-height: 1;
+}
+
+/* Encabezado */
+.inicio-agenda-card .inicio-card-heading h2 {
+  font-size: 14px;
+}
+
+.inicio-agenda-card .inicio-card-heading p {
+  font-size: 12px;
+}
+
+/* Horarios */
+.inicio-agenda-time strong {
+  font-size: 13px;
+}
+
+.inicio-agenda-time span {
+  font-size: 12px;
+}
+
+/* Información de jornadas */
+.inicio-agenda-meta > span:first-child {
+  font-size: 11px;
+}
+
+.inicio-agenda-info > strong {
+  font-size: 12.5px;
+}
+
+.inicio-agenda-info p {
+  font-size: 12px;
+}
+
+.inicio-agenda-info > small {
+  font-size: 11px;
+}
+
+.inicio-agenda-dose {
+  font-size: 11px;
+}
+
+/* Estado de jornada */
+.inicio-agenda-info .inicio-status {
+  font-size: 11px;
+}
+
+/* Próximas actividades */
+.inicio-next-title strong {
+  font-size: 12px;
+}
+
+.inicio-next-item > span {
+  font-size: 12px;
+}
+
+.inicio-next-item strong {
+  font-size: 12px;
+}
+
+.inicio-next-item small {
+  font-size: 11px;
+}
+
+/* Títulos de cada alerta */
+.inicio-alert-copy strong {
+  font-size: 11.5px;
+}
+
+/* Descripciones debajo de los títulos */
+.inicio-alert-copy small {
+  font-size: 10.5px;
+}
+
+/* Descripción del encabezado */
+.inicio-activity-card .inicio-card-heading p {
+  font-size: 11px;
+}
+
+/* Tipo de movimiento */
+.inicio-activity-copy strong {
+  font-size: 12px;
+}
+
+/* Referencia: VPH · CAM-006 */
+.inicio-activity-copy small {
+  font-size: 11px;
+}
+
+/* Fecha y responsable */
+.inicio-activity-copy em {
+  font-size: 11px;
+}
+
+/* Cantidades */
+.inicio-activity-item > b {
+  font-size: 12.5px;
+}
+
+.inicio-activity-card .inicio-card-heading h2 {
+  font-size: 13.5px;
+}
+
+/* Descripción del encabezado */
+.inicio-shortcuts-card .inicio-card-heading p {
+  font-size: 13px;
+}
+
+/* Nombre de cada módulo */
+.inicio-shortcut strong {
+  font-size: 12px;
+}
+
+/* Descripción de cada módulo */
+.inicio-shortcut small {
+  font-size: 11px;
+}
+
+/* Descripción del encabezado */
+.inicio-shortcuts-card .inicio-card-heading p {
+  font-size: 12px;
+}
+
+/* Nombre de cada módulo */
+.inicio-shortcut strong {
+  font-size: 12px;
+}
+
+/* Descripción de cada módulo */
+.inicio-shortcut small {
+  font-size: 11px;
+}
+
+.inicio-activity-card .inicio-card-heading p,
+.inicio-attention-card .inicio-card-heading p {
+  font-size: 12px;
+}
+
+/* Aumentar y centrar iconos */
+.inicio-shortcut-icon {
+  font-size: 21px !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5px;
+  line-height: 1;
+}
+
+/* Centrar icono principal de encabezado */
+.inicio-shortcuts-card .inicio-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+  line-height: 1;
+}
+
+.inicio-link-button {
+  text-decoration: none !important;
+}
+
+.inicio-link-text {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #8da8bd;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4e718e;
+}
+
+.inicio-link-button:hover .inicio-link-text {
+  color: #304f6b;
+  text-decoration-color: #304f6b;
+}
+
+/* Flecha sin subrayado */
+.inicio-link-button > .material-symbols-rounded {
+  text-decoration: none !important;
+} 
+
+.inicio-link-button {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.inicio-operational-head h2 {
+  font-size: 17px;
+}
+
+/* =========================================
+   18. RESPONSIVE - MÓVILES
+========================================= */
+
+@media (max-width: 650px) {
+
+  .welcome-panel {
+    min-height: 185px;
+    padding: 23px;
+    background-position: 68% center;
+  }
+
+  .welcome-content h1 {
+    font-size: 21px;
+  }
+
+  .welcome-decoration {
+    display: none;
+  }
+
+  .inicio-operational-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inicio-current-date {
+    white-space: normal;
+  }
+
+  .inicio-metrics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .inicio-metric-card {
+    min-height: 97px;
+    padding: 11px;
+    gap: 8px;
+  }
+
+  .inicio-metric-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .inicio-metric-copy strong {
+    font-size: 20px;
+  }
+
+  .inicio-card {
+    padding: 14px 12px;
+  }
+
+  .inicio-shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================
+   19. RESPONSIVE - MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 420px) {
+  .inicio-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio-agenda-item {
+    grid-template-columns: 43px 10px minmax(0, 1fr);
+    gap: 7px;
+  }
+}

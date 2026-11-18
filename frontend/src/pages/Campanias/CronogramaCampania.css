@@ -1,0 +1,556 @@
+.crono-container {
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #304052;
+  background: #f7f9fc;
+  border: 1px solid #e9eef3;
+  border-radius: 17px;
+}
+
+/* ENCABEZADO */
+
+.crono-header {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #e9eef3;
+}
+
+.crono-header-icon {
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(145deg, #456783, #263f58);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(48, 78, 105, .18);
+}
+
+.crono-header-icon span {
+  font-size: 27px;
+}
+
+.crono-eyebrow {
+  color: #8295a8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.crono-header h2 {
+  margin: 5px 0;
+  color: #24394e;
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.5px;
+}
+
+.crono-header p {
+  margin: 0;
+  color: #8795a4;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* RESUMEN */
+
+.crono-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.crono-resumen > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  background: #fff;
+  border: 1px solid #e9eef3;
+  border-radius: 11px;
+}
+
+.crono-resumen > div > span {
+  color: #63819b;
+  font-size: 21px;
+}
+
+.crono-resumen small,
+.crono-resumen strong {
+  display: block;
+}
+
+.crono-resumen small {
+  margin-bottom: 3px;
+  color: #9aa7b4;
+  font-size: 9px;
+}
+
+.crono-resumen strong {
+  color: #3c5268;
+  font-size: 10px;
+}
+
+/* ETAPAS */
+
+.crono-etapas {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.crono-etapa {
+  --etapa-color: #6284a0;
+  --etapa-light: #edf3f8;
+  --etapa-border: #dce7f0;
+
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--etapa-border);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(37, 57, 77, .035);
+}
+
+.crono-etapa.copoya {
+  --etapa-color: #4c8a87;
+  --etapa-light: #eaf5f3;
+  --etapa-border: #d6eae6;
+}
+
+.crono-etapa.jobo {
+  --etapa-color: #8b78ae;
+  --etapa-light: #f1edf8;
+  --etapa-border: #e5def0;
+}
+
+.crono-etapa.cierre {
+  --etapa-color: #b18a53;
+  --etapa-light: #faf3e8;
+  --etapa-border: #eee3d0;
+}
+
+/* CABECERA DE ETAPA */
+
+.crono-etapa-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.crono-etapa-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border-radius: 12px;
+}
+
+.crono-etapa-icon span {
+  font-size: 23px;
+}
+
+.crono-etapa-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.crono-etapa-info > span {
+  color: var(--etapa-color);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.crono-etapa-info h3 {
+  margin: 3px 0;
+  color: #30465b;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.crono-etapa-info p {
+  margin: 0;
+  color: #95a2af;
+  font-size: 9px;
+}
+
+.crono-etapa-badge {
+  padding: 7px 10px;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* LÍNEA DEL TIEMPO */
+
+.crono-timeline {
+  position: relative;
+  padding-top: 22px;
+}
+
+.crono-actividad {
+  position: relative;
+  display: grid;
+  grid-template-columns: 37px minmax(0, 1fr);
+  gap: 13px;
+  padding-bottom: 22px;
+}
+
+.crono-actividad:last-child {
+  padding-bottom: 0;
+}
+
+.crono-linea-punto {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.crono-linea-punto::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: -22px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--etapa-color),
+    var(--etapa-border)
+  );
+}
+
+.crono-actividad:last-child .crono-linea-punto::after {
+  display: none;
+}
+
+.crono-linea-punto span {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--etapa-border);
+  font-size: 18px;
+}
+
+/* TARJETAS */
+
+.crono-card {
+  min-width: 0;
+  padding: 15px;
+  background: #fbfcfe;
+  border: 1px solid #edf0f4;
+  border-radius: 11px;
+  transition: .2s ease;
+}
+
+.crono-card:hover {
+  border-color: var(--etapa-border);
+  box-shadow: 0 5px 15px rgba(37, 57, 77, .06);
+  transform: translateY(-2px);
+}
+
+.crono-card-destacado {
+  background: linear-gradient(135deg, #fbfefe, var(--etapa-light));
+  border-color: var(--etapa-border);
+}
+
+.crono-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.crono-actividad-numero {
+  color: var(--etapa-color);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.crono-fecha {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border-radius: 6px;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.crono-fecha span {
+  font-size: 13px;
+}
+
+.crono-card h4 {
+  margin: 0 0 8px;
+  color: #354b60;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 650;
+}
+
+.crono-horario {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 9px;
+  color: #718397;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.crono-horario span {
+  font-size: 15px;
+}
+
+.crono-descripcion {
+  margin: 0;
+  color: #8795a3;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* PERSONAL */
+
+.crono-responsable {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 13px;
+  padding-top: 11px;
+  border-top: 1px dashed #e2e8ee;
+}
+
+.crono-responsable > span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border-radius: 9px;
+  font-size: 17px;
+}
+
+.crono-responsable small,
+.crono-responsable strong {
+  display: block;
+}
+
+.crono-responsable small {
+  margin-bottom: 3px;
+  color: #a1acb8;
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: .8px;
+}
+
+.crono-responsable strong {
+  color: #51667a;
+  font-size: 9px;
+}
+
+/* META */
+
+.crono-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 9px 11px;
+  color: var(--etapa-color);
+  background: var(--etapa-light);
+  border-radius: 8px;
+  font-size: 9px;
+}
+
+.crono-meta span {
+  font-size: 16px;
+}
+
+.crono-meta strong {
+  margin-left: auto;
+  font-size: 11px;
+}
+
+/* LUGARES */
+
+.crono-lugares {
+  display: flex;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 11px;
+  background: #fff;
+  border: 1px solid var(--etapa-border);
+  border-radius: 8px;
+}
+
+.crono-lugares > span {
+  color: var(--etapa-color);
+  font-size: 17px;
+}
+
+.crono-lugares div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.crono-lugares div span {
+  padding: 4px 7px;
+  color: #738496;
+  background: #f3f6f8;
+  border-radius: 5px;
+  font-size: 8px;
+}
+
+/* ZONAS */
+
+.crono-zonas {
+  display: flex;
+  gap: 11px;
+  margin: 18px 0 0 50px;
+  padding: 13px;
+  background: var(--etapa-light);
+  border-radius: 10px;
+}
+
+.crono-zonas > span {
+  color: var(--etapa-color);
+  font-size: 20px;
+}
+
+.crono-zonas strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #4b6074;
+  font-size: 9px;
+}
+
+.crono-zonas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.crono-zonas-lista span {
+  padding: 5px 8px;
+  color: #64798c;
+  background: rgba(255,255,255,.8);
+  border-radius: 5px;
+  font-size: 8px;
+}
+
+/* PIE */
+
+.crono-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #e8edf2;
+  color: #96a4b1;
+}
+
+.crono-footer span {
+  color: #688ba2;
+  font-size: 17px;
+}
+
+.crono-footer p {
+  margin: 0;
+  font-size: 9px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  .crono-container {
+    padding: 15px;
+  }
+
+  .crono-header {
+    align-items: flex-start;
+  }
+
+  .crono-header h2 {
+    font-size: 17px;
+  }
+
+  .crono-resumen {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .crono-etapa {
+    padding: 13px;
+  }
+
+  .crono-etapa-header {
+    flex-wrap: wrap;
+  }
+
+  .crono-etapa-badge {
+    margin-left: 57px;
+  }
+
+  .crono-actividad {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .crono-linea-punto span {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .crono-linea-punto::after {
+    top: 33px;
+  }
+
+  .crono-card {
+    padding: 11px;
+  }
+
+  .crono-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .crono-zonas {
+    margin-left: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crono-card {
+    transition: none;
+  }
+}

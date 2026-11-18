@@ -1,0 +1,2005 @@
+.brigadas-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  color: #26394d;
+  font-family: "Poppins", sans-serif;
+}
+
+.brigadas-feedback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  margin: 16px 0;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.brigadas-feedback.success {
+  color: #34785a;
+  background: #edf6f0;
+  border: 1px solid #d7eadd;
+}
+
+.brigadas-feedback.error {
+  color: #a64c55;
+  background: #fbefef;
+  border: 1px solid #efdada;
+}
+
+.brigadas-feedback > .material-symbols-rounded {
+  font-size: 19px;
+}
+
+.brigadas-feedback button {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* =====================================================
+   ESTADÍSTICAS
+===================================================== */
+
+.brigadas-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.brigada-stat-card {
+  min-width: 0;
+  min-height: 91px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px;
+  border: 1px solid #e7edf2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(35, 55, 80, 0.035);
+}
+
+.brigada-stat-icon {
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.brigada-stat-icon .material-symbols-rounded {
+  font-size: 22px;
+}
+
+.brigada-stat-icon.total {
+  color: #456c8c;
+  background: #eaf1f7;
+}
+
+.brigada-stat-icon.available {
+  color: #508269;
+  background: #eaf4ed;
+}
+
+.brigada-stat-icon.assigned {
+  color: #8b754b;
+  background: #f7f1e5;
+}
+
+.brigada-stat-icon.activity {
+  color: #687e9a;
+  background: #edf1f6;
+}
+
+.brigada-stat-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.brigada-stat-card small {
+  color: #8291a0;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.brigada-stat-card strong {
+  color: #30465c;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.brigadas-filters {
+  width: 100%;
+  padding: 20px 22px;
+  margin-bottom: 32px;
+  background: #fff;
+  border: 1px solid #e7edf2;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(35, 55, 80, 0.035);
+}
+
+.brigadas-filters-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr 0.9fr;
+  gap: 15px;
+  align-items: end;
+}
+
+.brigadas-filter-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brigadas-filter-field > span {
+  color: #53687c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigadas-search-input,
+.brigadas-filter-field > select {
+  width: 100%;
+  height: 42px;
+  min-width: 0;
+  padding: 0 12px;
+  border: 1px solid #e0e7ed;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #40566c;
+  font-family: inherit;
+  font-size: 10px;
+  transition: 0.2s ease;
+}
+
+.brigadas-search-input {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brigadas-search-input > .material-symbols-rounded {
+  color: #899aab;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.brigadas-search-input input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #40566c;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.brigadas-search-input input::placeholder {
+  color: #a5b0ba;
+}
+
+.brigadas-search-input:focus-within,
+.brigadas-filter-field > select:focus {
+  border-color: #83a2bd;
+  box-shadow: 0 0 0 3px rgba(104, 148, 187, 0.11);
+}
+
+.brigadas-filter-field > select {
+  cursor: pointer;
+}
+
+.brigadas-filters-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #edf1f4;
+}
+
+.brigadas-filters-footer > span {
+  color: #8997a5;
+  font-size: 10px;
+}
+
+.brigadas-filters-footer button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #6387a8;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.brigadas-filters-footer button:hover {
+  color: #355f83;
+}
+
+.brigadas-filters-footer button .material-symbols-rounded {
+  font-size: 17px;
+}
+
+/* =====================================================
+   SECCIONES POR CAMPAÑA
+===================================================== */
+
+.brigadas-campaign-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.brigadas-campaign-section {
+  width: 100%;
+}
+
+.brigadas-campaign-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.brigadas-campaign-heading-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.brigadas-campaign-heading-icon .material-symbols-rounded {
+  font-size: 23px;
+}
+
+.brigadas-campaign-heading-icon.humana {
+  color: #456c8c;
+  background: #eaf1f7;
+}
+
+.brigadas-campaign-heading-icon.veterinaria {
+  color: #4d816c;
+  background: #eaf3ed;
+}
+
+.brigadas-campaign-heading-text {
+  min-width: 0;
+}
+
+.brigadas-campaign-heading-text > span {
+  color: #8394a5;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.brigadas-campaign-heading-text h2 {
+  margin: 3px 0 2px;
+  color: #344b61;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.brigadas-campaign-heading-text p {
+  margin: 0;
+  color: #8a99a7;
+  font-size: 10px;
+}
+
+.brigadas-campaign-count {
+  margin-left: auto;
+  padding: 7px 12px;
+  border: 1px solid #e5ebf0;
+  border-radius: 20px;
+  background: #fff;
+  color: #6d8195;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   GRID DE TARJETAS
+===================================================== */
+
+.brigadas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 19px;
+}
+
+/* =====================================================
+   TARJETA DE BRIGADA
+===================================================== */
+
+.brigada-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 19px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7edf2;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(35, 55, 80, 0.035);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.brigada-card:hover {
+  transform: translateY(-3px);
+  border-color: #d2dfe9;
+  box-shadow: 0 9px 23px rgba(35, 55, 80, 0.075);
+}
+
+/* CAMPAÑA DE LA TARJETA */
+
+.brigada-card-campaign {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brigada-campaign-icon {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #edf1f5;
+  border-radius: 12px;
+  background: #f5f8fa;
+  color: #68839c;
+}
+
+.brigada-campaign-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.brigada-campaign-icon .material-symbols-rounded {
+  font-size: 25px;
+}
+
+.brigada-card-campaign-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brigada-card-campaign-info > span {
+  color: #93a0ac;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.brigada-card-campaign-info strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #4b6278;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.brigada-card-campaign-info small {
+  color: #91a0ad;
+  font-size: 9px;
+}
+
+/* ESTADO */
+
+.brigada-status {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.brigada-card-campaign > .brigada-status {
+  margin-left: auto;
+}
+
+.brigada-status.disponible {
+  color: #4d8066;
+  background: #eaf4ed;
+}
+
+.brigada-status.asignada {
+  color: #927438;
+  background: #f8f1e3;
+}
+
+.brigada-status.en_ruta {
+  color: #557b9c;
+  background: #eaf1f7;
+}
+
+.brigada-status.en_visita {
+  color: #547d79;
+  background: #e8f3f1;
+}
+
+.brigada-status.inactiva {
+  color: #a05c65;
+  background: #f7ebed;
+}
+
+/* IDENTIDAD */
+
+.brigada-card-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.brigada-code {
+  display: inline-block;
+  color: #8295a7;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.brigada-card-identity h3 {
+  margin: 4px 0 0;
+  color: #30465c;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.brigada-identity-icon {
+  flex-shrink: 0;
+  color: #c4d0da;
+  font-size: 24px;
+}
+
+.brigada-description {
+  min-height: 51px;
+  margin: 0;
+  color: #7d8d9c;
+  font-size: 10px;
+  line-height: 1.75;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* EQUIPO */
+
+.brigada-team-section {
+  padding: 13px 0 12px;
+  border-top: 1px solid #edf1f4;
+  border-bottom: 1px solid #edf1f4;
+}
+
+.brigada-section-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.brigada-section-label > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #526d85;
+}
+
+.brigada-section-label .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.brigada-section-label strong {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigada-section-label small {
+  color: #94a0ac;
+  font-size: 9px;
+}
+
+.brigada-team-avatars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.brigada-team-member {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.brigada-avatar {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid #edf2f6;
+  border-radius: 50%;
+  background: #eaf0f5;
+  color: #8298ab;
+}
+
+.brigada-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.brigada-avatar .material-symbols-rounded {
+  font-size: 24px;
+}
+
+.brigada-avatar-initials {
+  color: #52728e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.brigada-team-member > span:last-child {
+  max-width: 100%;
+  color: #8493a1;
+  font-size: 8px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* RESUMEN */
+
+.brigada-card-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.brigada-summary-item {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brigada-summary-item > .material-symbols-rounded {
+  color: #8098ac;
+  font-size: 20px;
+}
+
+.brigada-summary-item > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brigada-summary-item small {
+  color: #91a0ac;
+  font-size: 9px;
+}
+
+.brigada-summary-item strong {
+  color: #50667b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* BOTONES */
+
+.brigada-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 13px;
+  border-top: 1px solid #edf1f4;
+}
+
+.brigada-button-details,
+.brigada-button-edit,
+.brigada-button-primary,
+.brigada-button-light {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.brigada-button-details .material-symbols-rounded,
+.brigada-button-edit .material-symbols-rounded,
+.brigada-button-primary .material-symbols-rounded,
+.brigada-button-light .material-symbols-rounded {
+  font-size: 17px;
+}
+
+.brigada-button-details {
+  color: #527a9b;
+  background: #eaf1f7;
+}
+
+.brigada-button-details:hover {
+  background: #dceaf4;
+}
+
+.brigada-button-edit {
+  color: #fff;
+  background: #527da3;
+}
+
+.brigada-button-edit:hover {
+  background: #416b91;
+}
+
+.brigada-button-primary {
+  color: #fff;
+  border-color: #304e69;
+  background: #304e69;
+  box-shadow: 0 3px 8px rgba(48, 78, 105, 0.12);
+}
+
+.brigada-button-primary:hover:not(:disabled) {
+  background: #24394e;
+  box-shadow: 0 4px 12px rgba(48, 78, 105, 0.2);
+}
+
+.brigada-button-light {
+  color: #687e91;
+  border-color: #dfe7ed;
+  background: #fff;
+}
+
+.brigada-button-light:hover:not(:disabled) {
+  background: #f1f5f8;
+}
+
+.brigada-button-primary:disabled,
+.brigada-button-light:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   CARGANDO Y VACÍO
+===================================================== */
+
+.brigadas-loading,
+.brigadas-empty {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 35px;
+  border: 1px solid #e7edf2;
+  border-radius: 14px;
+  background: #fff;
+  text-align: center;
+}
+
+.brigadas-loading {
+  color: #8293a2;
+  font-size: 11px;
+}
+
+.brigadas-loading .material-symbols-rounded {
+  font-size: 30px;
+  animation: brigadas-girar 1.2s linear infinite;
+}
+
+@keyframes brigadas-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.brigadas-empty > .material-symbols-rounded {
+  color: #8ba0b3;
+  font-size: 43px;
+}
+
+.brigadas-empty h3 {
+  margin: 4px 0 0;
+  color: #40566c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.brigadas-empty p {
+  margin: 0 0 8px;
+  color: #8b99a7;
+  font-size: 10px;
+}
+
+/* =====================================================
+   MODALES
+===================================================== */
+
+.brigada-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(20, 35, 51, 0.52);
+  backdrop-filter: blur(4px);
+  animation: brigada-overlay-in 0.18s ease;
+}
+
+@keyframes brigada-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.brigada-modal {
+  width: 100%;
+  max-width: 820px;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #edf1f5;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 23px 65px rgba(15, 30, 46, 0.23);
+  animation: brigada-modal-in 0.22s ease;
+}
+
+@keyframes brigada-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.brigada-modal-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 26px 20px;
+  border-bottom: 1px solid #edf1f4;
+  background: linear-gradient(135deg, #fff, #f8fafc);
+}
+
+.brigada-modal-eyebrow {
+  color: #8498aa;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+.brigada-modal-header h2 {
+  margin: 6px 0 4px;
+  color: #30465c;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.brigada-modal-header p {
+  margin: 0;
+  color: #8997a5;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.brigada-modal-close {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e6edf2;
+  border-radius: 9px;
+  background: #fff;
+  color: #718497;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.brigada-modal-close:hover {
+  background: #edf2f6;
+  color: #344e68;
+}
+
+.brigada-modal-close .material-symbols-rounded {
+  font-size: 19px;
+}
+
+.brigada-modal form {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.brigada-modal-body {
+  min-height: 0;
+  flex: 1;
+  padding: 8px 26px 22px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #bdcbd7 transparent;
+}
+
+.brigada-form-section {
+  padding: 18px 0;
+}
+
+.brigada-form-section h3 {
+  margin: 0 0 15px;
+  color: #405d77;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.brigada-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.brigada-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.brigada-field-full {
+  grid-column: 1 / -1;
+}
+
+.brigada-field > span {
+  color: #52677b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigada-field > span b {
+  color: #b55c63;
+}
+
+.brigada-field input,
+.brigada-field select,
+.brigada-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #dfe7ed;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #354c62;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  transition: 0.2s ease;
+}
+
+.brigada-field input,
+.brigada-field select {
+  min-height: 40px;
+}
+
+.brigada-field textarea {
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.brigada-field input::placeholder,
+.brigada-field textarea::placeholder {
+  color: #a5b0ba;
+}
+
+.brigada-field input:focus,
+.brigada-field select:focus,
+.brigada-field textarea:focus {
+  border-color: #7895af;
+  box-shadow: 0 0 0 3px rgba(104, 148, 187, 0.1);
+}
+
+.brigada-field input:disabled,
+.brigada-field select:disabled {
+  background: #f4f6f8;
+  color: #8594a2;
+  cursor: not-allowed;
+}
+
+.brigada-field small {
+  color: #94a1ad;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.brigada-form-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px 13px;
+  border: 1px solid #e5edf3;
+  border-radius: 9px;
+  background: #f7fafc;
+}
+
+.brigada-form-note > .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #6d8ba5;
+  font-size: 19px;
+}
+
+.brigada-form-note p {
+  margin: 0;
+  color: #708396;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.brigada-form-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 13px 0 2px;
+  padding: 11px 13px;
+  border: 1px solid #efdada;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #a34b52;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.brigada-form-error .material-symbols-rounded {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.brigada-modal-footer,
+.brigada-detail-footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 26px;
+  border-top: 1px solid #edf1f4;
+  background: #fbfcfd;
+}
+
+/* =====================================================
+   FORMULARIO DE EQUIPO
+===================================================== */
+
+.brigada-team-modal {
+  max-width: 820px;
+}
+
+.brigada-team-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px;
+  margin: 15px 0 17px;
+  border: 1px solid #e7edf2;
+  border-radius: 10px;
+  background: #f7fafc;
+}
+
+.brigada-team-intro > .material-symbols-rounded {
+  flex-shrink: 0;
+  color: #6485a1;
+  font-size: 25px;
+}
+
+.brigada-team-intro strong {
+  color: #405a72;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.brigada-team-intro p {
+  margin: 4px 0 0;
+  color: #8997a5;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.brigada-team-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brigada-team-form-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e9eef2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.brigada-team-form-number {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf3f8;
+  color: #52728f;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigada-team-form-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brigada-team-form-content label {
+  color: #52677b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigada-team-form-content select {
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #dfe7ed;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #40566c;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.brigada-team-form-content select:focus {
+  border-color: #7895af;
+  box-shadow: 0 0 0 3px rgba(104, 148, 187, 0.1);
+}
+
+.brigada-team-form-content select:disabled {
+  opacity: 0.6;
+}
+
+.brigada-team-form-content small {
+  color: #98a5b0;
+  font-size: 8px;
+}
+
+.brigada-team-function-icon {
+  flex-shrink: 0;
+  color: #91a3b3;
+  font-size: 21px;
+}
+
+/* =====================================================
+   MODAL DE DETALLES
+===================================================== */
+
+.brigada-detail-modal {
+  width: 100%;
+  max-width: 820px;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e7edf2;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 22px 65px rgba(15, 30, 46, 0.24);
+  animation: brigada-modal-in 0.22s ease;
+}
+
+.brigada-detail-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 19px 24px;
+  border-bottom: 1px solid #edf1f4;
+  background: #fbfcfd;
+}
+
+.brigada-detail-campaign {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brigada-detail-campaign > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brigada-detail-campaign > div:last-child > span {
+  color: #8798a8;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.brigada-detail-campaign small {
+  overflow: hidden;
+  color: #637c92;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brigada-detail-body {
+  flex: 1;
+  min-height: 0;
+  padding: 21px 25px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.brigada-detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brigada-detail-title-row h2 {
+  margin: 5px 0 0;
+  color: #30465c;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.brigada-detail-description {
+  margin: 11px 0 21px;
+  color: #7e8e9c;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.brigada-detail-section {
+  padding: 16px 0;
+  border-top: 1px solid #edf1f4;
+}
+
+.brigada-detail-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.brigada-detail-section-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #526d85;
+}
+
+.brigada-detail-section-heading > div .material-symbols-rounded {
+  font-size: 19px;
+}
+
+.brigada-detail-section-heading h3 {
+  margin: 0;
+  color: #40576c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.brigada-detail-section-heading button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid #e1e9ef;
+  border-radius: 7px;
+  background: #fff;
+  color: #5b7892;
+  font-family: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.brigada-detail-section-heading button:hover {
+  background: #f1f5f8;
+}
+
+.brigada-detail-section-heading button .material-symbols-rounded {
+  font-size: 15px;
+}
+
+.brigada-detail-count {
+  min-width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf3f8;
+  color: #587690;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.brigada-detail-members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.brigada-detail-member {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px;
+  border: 1px solid #e9eef2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.brigada-detail-avatar {
+  width: 43px;
+  height: 43px;
+}
+
+.brigada-detail-member > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brigada-detail-member strong {
+  overflow: hidden;
+  color: #485f74;
+  font-size: 9px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brigada-detail-member small {
+  color: #8796a4;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.brigada-detail-localities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.brigada-locality-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  border: 1px solid #e9eef2;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.brigada-locality-item > .material-symbols-rounded {
+  color: #7793aa;
+  font-size: 19px;
+}
+
+.brigada-locality-item > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brigada-locality-item strong {
+  overflow: hidden;
+  color: #50667b;
+  font-size: 9px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brigada-locality-item small {
+  color: #93a0ac;
+  font-size: 8px;
+}
+
+.brigada-detail-empty {
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px dashed #dfe7ed;
+  border-radius: 10px;
+  background: #fafbfd;
+  text-align: center;
+}
+
+.brigada-detail-empty.compact {
+  min-height: 75px;
+}
+
+.brigada-detail-empty > .material-symbols-rounded {
+  color: #91a3b2;
+  font-size: 27px;
+}
+
+.brigada-detail-empty p {
+  margin: 0;
+  color: #91a0ad;
+  font-size: 9px;
+}
+
+.brigada-detail-empty button {
+  padding: 6px 11px;
+  border: 1px solid #dce6ed;
+  border-radius: 7px;
+  background: #fff;
+  color: #577a98;
+  font-family: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.brigada-detail-footer {
+  padding: 14px 25px;
+}
+
+/* CARGANDO DETALLES */
+
+.brigada-detail-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(241, 244, 248, 0.75);
+  color: #71879a;
+  font-size: 11px;
+  backdrop-filter: blur(2px);
+}
+
+.brigada-detail-loading .material-symbols-rounded {
+  font-size: 30px;
+  animation: brigadas-girar 1.2s linear infinite;
+}
+
+/* =====================================================
+   DOSIS ASIGNADAS Y OBJETIVO
+===================================================== */
+
+.brigada-doses-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px;
+  margin: 18px 0;
+
+  background: #f8fafc;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+}
+
+.brigada-dose-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.brigada-dose-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+.brigada-dose-icon .material-symbols-rounded {
+  font-size: 20px;
+}
+
+.brigada-dose-icon.assigned {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.brigada-dose-icon.objective {
+  color: #059669;
+  background: #d1fae5;
+}
+
+.brigada-dose-item div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  flex: 1;
+}
+
+.brigada-dose-item small {
+  color: #64748b;
+  font-size: 9.5px;
+  font-weight: 500;
+}
+
+.brigada-dose-item strong {
+  color: #1e293b;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.brigada-dose-divider {
+  width: 1px;
+  height: 38px;
+  background: #dce3eb;
+}
+
+@media (max-width: 420px) {
+  .brigada-doses-section {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .brigada-dose-item {
+    gap: 7px;
+  }
+
+  .brigada-dose-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+
+  .brigada-dose-item strong {
+    font-size: 16px;
+  }
+
+  .brigada-dose-item small {
+    font-size: 10px;
+  }
+}
+
+/* FEEDBACK */
+.brigadas-feedback {
+  font-size: 12px;
+}
+
+/* ESTADÍSTICAS */
+.brigada-stat-card small {
+  font-size: 11px;
+}
+
+/* FILTROS */
+.brigadas-filter-field > span {
+  font-size: 11px;
+}
+
+.brigadas-search-input,
+.brigadas-filter-field > select {
+  font-size: 11px;
+}
+
+.brigadas-search-input input {
+  font-size: 11px;
+}
+
+.brigadas-filters-footer > span {
+  font-size: 11px;
+}
+
+.brigadas-filters-footer button {
+  font-size: 11px;
+}
+
+/* SECCIONES POR CAMPAÑA */
+.brigadas-campaign-heading-text > span {
+  font-size: 11px;
+}
+
+.brigadas-campaign-heading-text p {
+  font-size: 11px;
+}
+
+.brigadas-campaign-count {
+  font-size: 11px;
+}
+
+/* TARJETAS DE BRIGADA */
+.brigada-card-campaign-info > span {
+  font-size: 10px;
+}
+
+.brigada-card-campaign-info strong {
+  font-size: 11px;
+}
+
+.brigada-card-campaign-info small {
+  font-size: 11px;
+}
+
+/* ESTADOS */
+.brigada-status {
+  font-size: 11px;
+}
+
+/* IDENTIDAD */
+.brigada-code {
+  font-size: 11px;
+}
+
+/* DESCRIPCIÓN */
+.brigada-description {
+  font-size: 11px;
+}
+
+/* EQUIPO */
+.brigada-section-label strong {
+  font-size: 11px;
+}
+
+.brigada-section-label small {
+  font-size: 11px;
+}
+
+.brigada-team-member > span:last-child {
+  font-size: 10px;
+}
+
+/* RESUMEN */
+.brigada-summary-item small {
+  font-size: 11px;
+}
+
+.brigada-summary-item strong {
+  font-size: 11px;
+}
+
+/* BOTONES */
+.brigada-button-details,
+.brigada-button-edit,
+.brigada-button-primary,
+.brigada-button-light {
+  font-size: 11px;
+}
+
+/* CARGANDO Y VACÍO */
+.brigadas-loading {
+  font-size: 12px;
+}
+
+.brigadas-empty h3 {
+  font-size: 15px;
+}
+
+.brigadas-empty p {
+  font-size: 11px;
+}
+
+/* MODALES */
+.brigada-modal-eyebrow {
+  font-size: 11px;
+}
+
+.brigada-modal-header p {
+  font-size: 11px;
+}
+
+.brigada-form-section h3 {
+  font-size: 13px;
+}
+
+.brigada-field > span {
+  font-size: 11px;
+}
+
+.brigada-field input,
+.brigada-field select,
+.brigada-field textarea {
+  font-size: 11px;
+}
+
+.brigada-field small {
+  font-size: 11px;
+}
+
+.brigada-form-note p {
+  font-size: 11px;
+}
+
+.brigada-form-error {
+  font-size: 11px;
+}
+
+/* FORMULARIO DE EQUIPO */
+.brigada-team-intro strong {
+  font-size: 12px;
+}
+
+.brigada-team-intro p {
+  font-size: 11px;
+}
+
+.brigada-team-form-content label {
+  font-size: 11px;
+}
+
+.brigada-team-form-content small {
+  font-size: 10px;
+}
+
+/* MODAL DE DETALLES */
+.brigada-detail-campaign > div:last-child > span {
+  font-size: 10px;
+}
+
+.brigada-detail-campaign small {
+  font-size: 11px;
+}
+
+.brigada-detail-description {
+  font-size: 11px;
+}
+
+.brigada-detail-section-heading h3 {
+  font-size: 12px;
+}
+
+.brigada-detail-section-heading button {
+  font-size: 11px;
+}
+
+.brigada-detail-member strong {
+  font-size: 11px;
+}
+
+.brigada-detail-member small {
+  font-size: 10px;
+}
+
+.brigada-locality-item strong {
+  font-size: 11px;
+}
+
+.brigada-locality-item small {
+  font-size: 10px;
+}
+
+.brigada-detail-empty p {
+  font-size: 11px;
+}
+
+.brigada-detail-empty button {
+  font-size: 11px;
+}
+
+/* DOSIS ASIGNADAS Y OBJETIVO */
+.brigada-dose-item small {
+  font-size: 10.5px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1150px) {
+  .brigadas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brigadas-filters-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .brigadas-filter-field:last-child {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 850px) {
+  .brigadas-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brigadas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .brigadas-stats {
+    gap: 9px;
+  }
+
+  .brigada-stat-card {
+    min-height: 77px;
+    gap: 9px;
+    padding: 11px;
+  }
+
+  .brigada-stat-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .brigada-stat-card small {
+    font-size: 9px;
+  }
+
+  .brigada-stat-card strong {
+    font-size: 19px;
+  }
+
+  .brigadas-filters {
+    padding: 16px;
+  }
+
+  .brigadas-filters-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .brigadas-filter-field:last-child {
+    grid-column: auto;
+  }
+
+  .brigadas-campaign-heading {
+    gap: 9px;
+  }
+
+  .brigadas-campaign-heading-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .brigadas-campaign-heading-text h2 {
+    font-size: 12px;
+  }
+
+  .brigadas-campaign-heading-text p {
+    font-size: 9px;
+  }
+
+  .brigadas-campaign-count {
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+
+  .brigadas-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .brigada-card {
+    padding: 16px;
+    gap: 13px;
+  }
+
+  .brigada-modal-overlay {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .brigada-modal,
+  .brigada-detail-modal {
+    max-height: calc(100vh - 20px);
+    border-radius: 13px;
+  }
+
+  .brigada-modal-header {
+    padding: 18px;
+  }
+
+  .brigada-modal-header h2 {
+    font-size: 17px;
+  }
+
+  .brigada-modal-body {
+    padding: 5px 18px 17px;
+  }
+
+  .brigada-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .brigada-field-full {
+    grid-column: auto;
+  }
+
+  .brigada-modal-footer,
+  .brigada-detail-footer {
+    padding: 12px 18px;
+  }
+
+  .brigada-detail-header {
+    padding: 14px 16px;
+  }
+
+  .brigada-detail-body {
+    padding: 17px;
+  }
+
+  .brigada-detail-members,
+  .brigada-detail-localities {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .brigada-team-avatars {
+    gap: 2px;
+  }
+
+  .brigada-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brigada-team-member > span:last-child {
+    font-size: 7px;
+  }
+
+  .brigada-card-campaign-info strong {
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brigada-card,
+  .brigada-button-details,
+  .brigada-button-edit,
+  .brigada-button-primary,
+  .brigada-button-light {
+    transition: none;
+  }
+
+  .brigada-modal,
+  .brigada-modal-overlay {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .brigada-stat-card small {
+    font-size: 11px;
+  }
+
+  .brigadas-campaign-heading-text h2 {
+    font-size: 13px;
+  }
+
+  .brigadas-campaign-heading-text p {
+    font-size: 11px;
+  }
+
+  .brigadas-campaign-count {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brigada-dose-item strong {
+    font-size: 16px;
+  }
+
+  .brigada-dose-item small {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brigada-team-member > span:last-child {
+    font-size: 8px;
+  }
+
+  .brigada-card-campaign-info strong {
+    font-size: 11px;
+  }
+}

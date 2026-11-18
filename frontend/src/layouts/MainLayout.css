@@ -1,0 +1,31 @@
+.app-layout {
+  min-height: 100vh;
+  background: #F1F4F8;
+}
+
+.app-main {
+  min-height: 100vh;
+  margin-left: 88px;
+  width: calc(100% - 88px);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-page {
+  flex: 1;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 28px 30px 40px;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+
+  .app-page {
+    padding: 22px 15px 30px;
+  }
+}

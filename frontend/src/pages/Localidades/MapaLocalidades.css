@@ -1,0 +1,299 @@
+/* =========================================
+   CONTENEDOR DEL MAPA
+========================================= */
+
+.localidades-map-container {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  overflow: hidden;
+  background: #edf2f6;
+  border-radius: 14px;
+  border: 1px solid #e4eaf0;
+}
+
+.localidades-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #edf2f6;
+}
+
+
+/* =========================================
+   MARCADORES PERSONALIZADOS
+========================================= */
+
+.localidad-marker-wrapper {
+  background: transparent !important;
+  border: none !important;
+}
+
+.localidad-marker {
+  width: 38px;
+  height: 46px;
+  filter: drop-shadow(0 3px 3px rgba(24, 44, 64, 0.28));
+  transition: transform 0.2s ease;
+}
+
+.localidad-marker svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.localidad-marker-wrapper:hover .localidad-marker {
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* =========================================
+   VENTANA EMERGENTE
+========================================= */
+
+.localidad-popup {
+  display: flex;
+  align-items: stretch;
+  gap: 11px;
+  width: 250px;
+  max-width: 250px;
+  font-family: "Poppins", sans-serif;
+}
+
+.localidad-popup-indicator {
+  width: 5px;
+  min-width: 5px;
+  border-radius: 8px;
+}
+
+.localidad-popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.localidad-popup-code {
+  color: #8a9aaa;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.localidad-popup-name {
+  color: #344b61;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.localidad-popup-municipio {
+  color: #8190a0;
+  font-size: 10px;
+}
+
+.localidad-popup-divider {
+  height: 1px;
+  margin: 6px 0;
+  background: #edf1f5;
+}
+
+
+/* =========================================
+   ENCABEZADO DE CAMPAÑAS
+========================================= */
+
+.localidad-popup-campaigns-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.localidad-popup-campaigns-heading .material-symbols-rounded {
+  color: #477ba8;
+  font-size: 17px;
+}
+
+.localidad-popup-campaigns-heading strong {
+  color: #405a72;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   LISTA DE CAMPAÑAS
+========================================= */
+
+.localidad-popup-campaigns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.localidad-popup-campaign {
+  padding: 9px;
+  background: #f7f9fc;
+  border: 1px solid #e9eef4;
+  border-radius: 8px;
+}
+
+.localidad-popup-campaign-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.localidad-popup-campaign-info strong {
+  color: #344b61;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.localidad-popup-campaign-code {
+  color: #9aa7b4;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.localidad-popup-campaign-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.localidad-popup-category {
+  color: #718397;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   ETIQUETAS DE ESTADO
+========================================= */
+
+.localidad-popup-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.localidad-popup-status-planeada {
+  color: #956a20;
+  background: #fff4dc;
+}
+
+.localidad-popup-status-activa {
+  color: #247a55;
+  background: #e4f5ec;
+}
+
+.localidad-popup-status-finalizada {
+  color: #526a83;
+  background: #eaf0f6;
+}
+
+.localidad-popup-status-cancelada {
+  color: #ad4d55;
+  background: #fcebed;
+}
+
+.localidad-popup-status-desconocida {
+  color: #667789;
+  background: #eef1f4;
+}
+
+
+/* =========================================
+   SIN CAMPAÑAS ASIGNADAS
+========================================= */
+
+.localidad-popup-empty {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 10px;
+  background: #f7f9fc;
+  border: 1px dashed #dce5ed;
+  border-radius: 8px;
+  color: #8796a5;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.localidad-popup-empty .material-symbols-rounded {
+  font-size: 16px;
+  color: #9aabba;
+}
+
+
+/* =========================================
+   CONTROLES DE LEAFLET
+========================================= */
+
+.localidades-map .leaflet-control-zoom {
+  border: none;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 2px 9px rgba(35, 55, 80, 0.16);
+}
+
+.localidades-map .leaflet-control-zoom a {
+  color: #526e88;
+}
+
+.localidades-map .leaflet-control-attribution {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   ESTILOS DEL POPUP DE LEAFLET
+========================================= */
+
+.localidades-map .leaflet-popup-content {
+  margin: 13px 14px;
+  width: 250px !important;
+}
+
+.localidades-map .leaflet-popup-content-wrapper {
+  border-radius: 11px;
+  box-shadow: 0 4px 18px rgba(35, 55, 80, 0.17);
+}
+
+.localidades-map .leaflet-popup-tip {
+  box-shadow: 0 2px 4px rgba(35, 55, 80, 0.08);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .localidades-map-container {
+    height: 390px;
+    border-radius: 11px;
+  }
+
+  .localidad-popup {
+    width: 225px;
+    max-width: 225px;
+  }
+
+  .localidades-map .leaflet-popup-content {
+    width: 225px !important;
+  }
+}
